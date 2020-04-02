@@ -2,6 +2,13 @@ window.onload = function() {
   getSummary();
 };
 
+const country = document.querySelector('#country');
+country.addEventListener('keypress', function(e) {
+  if (e.key === 'Enter') {
+      getCovid19();
+  }
+});
+
 function getCovid19() {
 	"use strict";
 	let country = document.querySelector("#country").value;
@@ -12,6 +19,8 @@ function getCovid19() {
 		for (let elem of document.querySelectorAll('.hide')) {
     			elem.style.display = 'block';
 			}
+      	document.querySelector("#flag").src = '' ;
+
 		GetAsync(country, callback);
 	}
 	
@@ -21,6 +30,7 @@ function getCovid19() {
 
 function callback(data,country) {
 	 console.log("helloxxx");
+    
 	const dt = Date(data['udpated']);
 	
 	const flag = data['countryInfo']['flag'];
@@ -40,9 +50,7 @@ function callback(data,country) {
 }
 
 function GetAsync(country, callback) {
-    const query = `${country}`;
-   // = `https://free.currencyconverterapi.com/api/v5/convert?q=${query}&compact=ultra`;
-    const url  = `https://corona.lmao.ninja/countries/${query}`;
+    const url  = `https://corona.lmao.ninja/countries/${country}`;
 	fetch(url).then(
 	response => {
 		if(response.status == 200){
