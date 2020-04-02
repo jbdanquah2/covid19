@@ -21,6 +21,10 @@ table {
   min-height: 100vh;
 }
 
+#nation {
+  text-decoration: underline;
+}
+
 #content-wrap {
   padding-bottom: 2.5rem;    /* Footer height */
 }

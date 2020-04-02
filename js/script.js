@@ -25,6 +25,7 @@ function callback(data,country) {
 	
 	const flag = data['countryInfo']['flag'];
 	document.querySelector("#flag").src = flag ;
+	document.querySelector("#nation").innerHTML = data['country']; 
     document.querySelector("#cases").innerHTML = data['cases'];               
 	document.querySelector("#critical").innerHTML = data['critical'];
 	document.querySelector("#active").innerHTML = data['active'];
