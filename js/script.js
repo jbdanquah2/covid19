@@ -2,11 +2,6 @@ window.onload = function() {
   getSummary();
 };
 
-const submit = document.querySelector('#submit');
-submit.addEventListener('click', function(event) {
-    getCovid19();
-});
-
 function getCovid19() {
 	"use strict";
 	let country = document.querySelector("#country").value;
