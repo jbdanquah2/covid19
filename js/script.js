@@ -3,12 +3,6 @@ window.onload = function() {
 };
 
 const submit = document.querySelector('#submit');
-const country = document.querySelector('#country');
-country.addEventListener('keypress', function(e) {
-  if (e.key == 'Enter') {
-    getCovid19();
-  }
-});
 submit.addEventListener('click', function(event) {
     getCovid19();
 });
@@ -24,7 +18,9 @@ function getCovid19() {
     			elem.style.display = 'block';
 			}
 		GetAsync(country, callback);
-	}	
+	}
+	
+	
 }
 
 
@@ -99,4 +95,14 @@ function summary(data) {
 	document.querySelector('#sActive').innerHTML = data['active'];
 	document.querySelector('#affectedCountries').innerHTML = data['affectedCountries'];
 }
+
+
+//          "cases": 934825,
+//    "deaths": 47187,
+//    "recovered": 193989,
+//    "updated": 1585785032068,
+//    "active": 693649,
+//    "affectedCountries": 205
+
+
 
