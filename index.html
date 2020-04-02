@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Hello, world!</title>
+  </head>
+  <body> 
+   <!-- Image and text -->
+    <nav class="navbar navbar-light bg-light fixed-top mb-2">
+      <a class="navbar-brand" href="#">
+        <img  src="img/2019-coronavirus.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        Codvid19
+      </a>
+    </nav>
+    <div id="page-container" class="container-md d-flex justify-content-center">
+     
+      <div class="row">
+        <div class="col col-md-auto">
+          <center>
+          <h3 class="mt-5 pt-3">Covid19</h3>
+          <span class="text-danger">Realtime Update</span>
+          <p class="mb-3">Search cases with country name</p>
+          <div class="col-12">
+            <div class="form-group mx-sm-3 mb-2">
+               <input size="30" required id="country" class="form-control p-2" type="text" placeholder="Enter country eg: China">
+            </div>            
+            <button class="btn btn-primary mb-2" onclick="getCovid19()" id="submit" class="form-contro mb-2">Search</button><br>
+              <img class="mt-2" id="flag" width="250" height="150" src="" alt="">
+          </div>
+          <div id="summary" class="col-12">
+            <h4>Summary</h4>
+            <p><small>This gives a summary of the total cases for all affected countries</small></p>
+            <h5 class="mb-0"><small>Last Updated:</small></h5>
+            <small class="text-primary mt-0" id="sUpdated">-</small><br><br>
+            <table class="table border table-striped table-hover">
+              <thead>
+                <th class="col">Type</th>
+                <th class="col">##</th>
+              </thead>
+              <tbody>
+                <tr class="bg-warning">
+                  <td>Cases</td>
+                  <td id="sCases">-</td>
+                </tr>
+                <tr>
+                  <td>Deaths</td>
+                  <td id="sDeaths">-</td>
+                </tr>
+                <tr class="table-success">
+                  <td>Recovered</td>
+                  <td id="sRecovered">-</td>
+                </tr>
+                <tr>
+                  <td>Active</td>
+                  <td id="sActive">-</td>
+                </tr>
+                <tr class="table-danger">
+                  <td >Affected Countries</td>
+                  <td id="affectedCountries">-</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          
+          <div class="col-12">
+           <div class="container"><br>
+            <h5 class="hide">Last Updated:</h5>
+             <small class="hide text-primary mt-0" id="updated">-</small><br>
+            <table class="table border table-striped table-hover hide">
+              <thead>
+                <th class="col">Type</th>
+                <th class="col">##</th>
+              </thead>
+                <tr class="bg-warning">
+                  <td >Total Cases</td>
+                  <td id="cases">--</td>
+                </tr>
+                <tr class="table-danger">
+                  <td>Critical Cases</td>
+                  <td id="critical">--</td>
+                </tr>
+                <tr>
+                  <td >Active Cases</td>
+                  <td id="active">--</td>
+                </tr>
+                 <tr>
+                  <td >Deaths</td>
+                  <td id="deaths">--</td>
+                </tr>
+                 <tr class="bg-success" >
+                  <td >Recovered</td>
+                  <td id="recovered">--</td>
+                </tr>
+                 <tr>
+                  <td >Cases Today</td>
+                  <td id="todayCases">--</td>
+                </tr>
+                 <tr>
+                  <td>Deaths Today</td>
+                  <td id="todayDeaths">--</td>
+                </tr>
+                 <tr>
+                  <td >Cases Per Million</td>
+                  <td id="casesPerOneMillion">--</td>
+                </tr>
+                 <tr>
+                  <td >Deaths Per Million</td>
+                  <td id="deathsPerOneMillion">--</td>
+                </tr>
+              <tbody>
+              <tfooter>
+                <tr>
+
+                </tr>
+              </tfooter>
+              
+            </tbody>
+          </table>
+           </div> 
+          </div>
+          </center>
+        </div>
+      </div>
+    </div>
+   
+    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/script.js" type="text/javascript"></script>
+    <script src="js/jquery-3.4.1.min.js"> </script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+  <footer class="jumbotron mb-0 bg-light">
+
+     <center>
+        <div class="container-fluid">
+          <span class="mb-0">Created by: jbdanquah</span><br>
+          <p class="mt-0">Email: yjbdanquah@gmail.com</p>
+        </div>
+     </center>
+  
+  </footer>
+</html>
