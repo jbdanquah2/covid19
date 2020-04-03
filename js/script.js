@@ -2,6 +2,7 @@ window.onload = function() {
   getSummary();
 };
 
+//const submit = document.querySelector('#submit');
 const country = document.querySelector('#country');
 country.addEventListener('keypress', function(e) {
   if (e.key === 'Enter') {
@@ -20,7 +21,6 @@ function getCovid19() {
     			elem.style.display = 'block';
 			}
       	document.querySelector("#flag").src = '' ;
-
 		GetAsync(country, callback);
 	}
 	
@@ -59,10 +59,11 @@ function GetAsync(country, callback) {
 				console.log('data', data);
 				callback(data,country);
 			}).catch(ex => {
-            	alert("Sorry something went wrong. Try again!");
+                alert(country + " not found or doesn't have any cases!");
+                console.log(ex);
             });
 		}if (response.status == 404) {
-			alert("Country not found or Covid19 not present there!");
+			alert("Sorry something went wrong. Try again!");
 		}
 	}).catch(err => {
 		alert("Check your network connection!");
@@ -98,14 +99,6 @@ function summary(data) {
 	document.querySelector('#sActive').innerHTML = data['active'];
 	document.querySelector('#affectedCountries').innerHTML = data['affectedCountries'];
 }
-
-
-//          "cases": 934825,
-//    "deaths": 47187,
-//    "recovered": 193989,
-//    "updated": 1585785032068,
-//    "active": 693649,
-//    "affectedCountries": 205
 
 
 
