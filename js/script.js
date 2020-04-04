@@ -1,5 +1,6 @@
 window.onload = function() {
   getSummary();
+	getNews();
 };
 
 //const submit = document.querySelector('#submit');
@@ -20,10 +21,9 @@ function getCovid19() {
 		for (let elem of document.querySelectorAll('.hide')) {
     			elem.style.display = 'block';
 			}
-      	document.querySelector("#flag").src = '' ;
+      	
 		GetAsync(country, callback);
 	}
-	
 	
 }
 
@@ -57,6 +57,7 @@ function GetAsync(country, callback) {
 			console.log('response', response);
 			response.json().then(data => {
 				console.log('data', data);
+              
 				callback(data,country);
 			}).catch(ex => {
                 alert(country + " not found or doesn't have any cases!");
@@ -100,5 +101,44 @@ function summary(data) {
 	document.querySelector('#affectedCountries').innerHTML = data['affectedCountries'];
 }
 
+function getNews() {
+	const url = `https://newsapi.org/v2/everything?q=COVID&from=2020-03-16&sortBy=publishedAt&apiKey=e54bfc507950436d88f35e7ce6814a6b&pageSize=100&page=1`;
+	;
+	fetch(url).then(
+	response => {
+		if (response.status == 200) {
+			console.log('newsresponse',response);
+			response.json().then(data => {
+				console.log('newsdata', data);
+				news(data);
+			}).catch(ex => {
+				console.log(ex);
+			})
+		}
+	}).catch(err => {
+		alert('Check your network connection!!!');
+		console.log(err);
+	});
+}
 
-
+function news(data) {
+	let news = document.querySelector('.news');
+	let result = '';
+	let i = 0;
+	while (i < 5) {
+		let content = data['articles'][i]['content'];
+		content = content.substring(0,150);
+		result += ` <small class="mt-0">Title: <span>${data['articles'][i]['title']}</span></small><br>     
+          <small class="mt-0">By: ${data['articles'][i]['author']} <span></span></small><br>
+       
+        
+        <img class='newsImg' width="150" height="100"  src="${data['articles'][i]['urlToImage']}" alt="">
+        <p>
+         ${content} <a href="${data['articles'][i]['url']}">readmore</a>
+        </p>
+		<hr>`;
+		
+		i++;
+	}
+	news.innerHTML = result;
+}

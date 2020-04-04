@@ -30,7 +30,17 @@ table {
 }
 
 #content-wrap {
-  padding-bottom: 2.5rem;    /* Footer height */
+  padding-bottom: 2.5rem;   
+}
+
+#newsDiv {
+  font-family: Arial, sans-serif;
+  border-radius: 7%;
+  overflow: hidden;
+}
+
+.newsImg {
+  border-radius: 10%;
 }
 
 #footer {
