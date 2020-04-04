@@ -64,7 +64,7 @@ function GetAsync(country, callback) {
                 console.log(ex);
             });
 		}if (response.status == 404) {
-			alert("Sorry something went wrong. Try again!");
+			 alert(country + " not found or doesn't have any cases!");
 		}
 	}).catch(err => {
 		alert("Check your network connection!");
