@@ -127,16 +127,23 @@ function getNews() {
 function news(data) {
 	let news = document.querySelector('#news');
 	let result = '';
-	let i = 5;
-	while (i < 11) {
+	let i = 0;
+	while (i < 8) {
+		let urlToImage = data['articles'][i]['urlToImage'];
 		let content = data['articles'][i]['content'];
-		content = content.substring(0,200);
+		if (content != null)  {
+			content = content.substring(0,200);
+		}else {
+			content = '';
+		}
+		
+
 		result += `<div class="text-muted m-2"> 
                 <div class="card p-4">
 			      <h5 class="mt-0 card-title "><span class="text-danger">Title:</span> <span>${data['articles'][i]['title']}</span></h5>    
           <!--	<small class="mt-0">By: ${data['articles'][i]['author']} <span></span></small> -->
        
-					<img height="auto" class='card-img-top newsImg responsive' src="${data['articles'][i]['urlToImage']}" alt="">
+					<img height="auto" class='card-img-top newsImg responsive' src="${urlToImage}" alt="">
 					<p class="card-text text-justify ">
 						${content} <br/> <a class="btn btn-primary card-link" href="${data['articles'][i]['url']}" target="_blank">readmore</a>
 					</p>
