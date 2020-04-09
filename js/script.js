@@ -15,7 +15,7 @@ function getCovid19() {
 	"use strict";
 	let country = document.querySelector("#country").value;
 	if (!country) {
-		alert("Please enter a country!")
+		alertify.alert("<span class='pl-1 pr-1 text-light bg-danger'>COVID19</span> | <span class='pl-1 pr-1 text-light bg-warning'>NEWS</span> ","Please enter a country!")
 	}else {
 		document.querySelector('#summary').style.display = 'none';
 		for (let elem of document.querySelectorAll('.hide')) {
@@ -60,14 +60,15 @@ function GetAsync(country, callback) {
               
 				callback(data,country);
 			}).catch(ex => {
-                alert(country + " not found or doesn't have any cases!");
+               alertify.alert("<span class='pl-1 pr-1 text-light bg-danger'>COVID19</span> | <span class='pl-1 pr-1 text-light bg-warning'>NEWS</span> ", country + " not found or doesn't have any cases!");
+				
                 console.log(ex);
             });
 		}if (response.status == 404) {
-			 alert(country + " not found or doesn't have any cases!");
+			 alertify.alert("<span class='pl-1 pr-1 text-light bg-danger'>COVID19</span> | <span class='pl-1 pr-1 text-light bg-warning'>NEWS</span> ", country + " not found or doesn't have any cases!");
 		}
 	}).catch(err => {
-		alert("Check your network connection!");
+		alertify.alert("<span class='pl-1 pr-1 text-light bg-danger'>COVID19</span> | <span class='pl-1 pr-1 text-light bg-warning'>NEWS</span> ", "Check your network connection!");
 		console.log(err);
        
 	});
@@ -87,7 +88,7 @@ function getSummary() {
 			});
 		}
 	}).catch(err => {
-		alert("Check your network connection!");
+		alertify.alert("<span class='pl-1 pr-1 text-light bg-danger'>COVID19</span> | <span class='pl-1 pr-1 text-light bg-warning'>NEWS</span> ", "Check your network connection!");
 		console.log(err);
 	});
 }
@@ -118,7 +119,7 @@ function getNews() {
 			})
 		}
 	}).catch(err => {
-		alert('Check your network connection!!!');
+		alertify.alert("<span class='pl-1 pr-1 text-light bg-danger'>COVID19</span> | <span class='pl-1 pr-1 text-light bg-warning'>NEWS</span> ", 'Check your network connection!!!');
 		console.log(err);
 	});
 }
