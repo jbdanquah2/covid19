@@ -141,10 +141,7 @@ function news(data) {
 					</p>
 					  </div>
 				   </div>
-		`;
-		
-		
-		
+		`;	
 		i++;
 	}
 	news.innerHTML = result;
