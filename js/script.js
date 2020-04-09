@@ -107,7 +107,7 @@ function summary(data) {
 function getNews() {
 	let date = new Date();
 	console.log(date);
-	const url = `https://newsapi.org/v2/everything?qInTitle=covid19&from=${date}&sortBy=popularity&language=en&apiKey=e54bfc507950436d88f35e7ce6814a6b&Size=100&page=1`;
+	const url = `https://newsapi.org/v2/everything?qInTitle=covid19&from=${date}&sortBy=popularity&language=en&apiKey=e54bfc507950436d88f35e7ce6814a6b&Size=12&page=1`;
 	;
 	fetch(url).then(
 	response => {
