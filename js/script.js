@@ -109,8 +109,10 @@ function summary(data) {
 function getNews() {
 	let date = new Date();
 	console.log(date);
+
 	const url = `https://newsapi.org/v2/everything?qInTitle=covid19&from=${date}&sortBy=popularity&language=en&apiKey=2ab23803d9704a519bcc1b4758beb80a&Size=12&page=1`;
-	;
+	
+	
 	fetch(url).then(
 	response => {
 		if (response.status == 200) {
