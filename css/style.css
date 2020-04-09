@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 body {
     background-color: #fefefe;
     color:  #453;
-    font-family: "Helvetica Neue", Arial, sans-serif;
+	font-family: 'Oswald', sans-serif;
+/*    font-family: "Helvetica Neue", Arial, sans-serif;*/
     height: 100%;
+	overflow-x: hidden;
 }
 
 nav img {
@@ -34,14 +37,43 @@ table {
 }
 
 #newsDiv {
-  font-family: Arial, sans-serif;
+  font-family:  Verdana, arial, sans-serif; sans-serif;
   border-radius: 7%;
   overflow: hidden;
 }
 
+.heading {
+	font-weight: 800;	
+}
+
 .newsImg {
   border-radius: 10%;
+  max-height: 300px;
+  height: auto !important;	
+	
 }
+
+.card {
+	border: none;
+	width: 60%;
+}
+@media screen and (max-width: 700px) {
+	.card {
+		width: 100% !important;
+	}
+
+
+	
+}
+
+
+/*
+.col-md-6{
+  display: flex;
+	align-items: center;
+	justify-content: center
+}
+*/
 
 #footer {
   position: absolute;

@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Covid19 | jbdanquah!</title>
+    <title>COVID19 | jbdanquah-online!</title>
   </head>
   <body> 
    <!-- Image and text -->
@@ -23,11 +23,11 @@
     
       <div class="row">
         
-        <div class="col col-md-auto">
+        <div id="main" class="col col-md-auto">
          
           <center>
           <div class=" alert alert-info mt-5 mb-1" role="alert">
-          Stay home - Stop the spread!
+          Stay home - <span class="bg-danger text-light pl-1 pr-1" >Stop the spread!</span>
          </div>
           <h3 class=" mt-0 pt-0">Covid19</h3>
           <span class="text-danger">Realtime Update</span>
@@ -36,7 +36,7 @@
             <div class="form-group mx-sm-3 mb-2">
                <input size="30" required id="country" class="form-control p-2" type="text" placeholder="Enter country eg: China">
             </div>            
-            <button class="btn btn-primary mb-2" onclick="getCovid19()" id="submit" class="form-contro mb-2">Search</button><br>
+            <button class="btn btn-primary mb-0" onclick="getCovid19()" id="submit" >Search</button><br>
               <img class="mt-2" id="flag" width="250" height="150" src="" alt="">
           </div>
           <div id="summary" class="col-12">
@@ -120,14 +120,7 @@
                   <td >Deaths Per Million</td>
                   <td id="deathsPerOneMillion">--</td>
                 </tr>
-              <tbody>
-              <tfooter>
-                <tr>
-
-                </tr>
-              </tfooter>
               
-            </tbody>
           </table>
            </div> 
           </div>
@@ -135,22 +128,23 @@
         </div>
       </div>
       
-    </div>
-<!--
-   <div class="row table-danger pt-3 text-white">
-    <div class="container-md">
-      <div class="col-md-10 offset-md-1">
-        <div class="container-fluid">
-          <h3 class="mb-4">Current News</h3> 
-          <span class="news">
-            
-          </span>
+    </div><hr>
+   <div class="row ">
+    <div class="container-md d-flex justify-content-center">
+      <div class="col-md-auto pt-2 text-light ">
+       <center> <div class="container-fluid ">
+         
+          <h3 class="mb-3 text-center heading text-muted">TOP COVID19 NEWS</h3> 
+          <div class="card-group text-dark">
+			  <span id="news">
+	`				
+			  </span>
         </div>
-      </div>
+      
+      </div>  </center>
     </div> 
    </div>
--->
-    
+	 </div>  
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

@@ -102,7 +102,9 @@ function summary(data) {
 }
 
 function getNews() {
-	const url = `https://newsapi.org/v2/everything?q=COVID&from=2020-03-16&sortBy=publishedAt&apiKey=e54bfc507950436d88f35e7ce6814a6b&pageSize=100&page=1`;
+	let date = new Date();
+	console.log(date);
+	const url = `http://newsapi.org/v2/everything?qInTitle=covid19&from=${date}&sortBy=popularity&language=en&apiKey=e54bfc507950436d88f35e7ce6814a6b&Size=100&page=1`;
 	;
 	fetch(url).then(
 	response => {
@@ -122,21 +124,26 @@ function getNews() {
 }
 
 function news(data) {
-	let news = document.querySelector('.news');
+	let news = document.querySelector('#news');
 	let result = '';
-	let i = 0;
-	while (i < 5) {
+	let i = 5;
+	while (i < 11) {
 		let content = data['articles'][i]['content'];
-		content = content.substring(0,150);
-		result += ` <small class="mt-0">Title: <span>${data['articles'][i]['title']}</span></small><br>     
-          <small class="mt-0">By: ${data['articles'][i]['author']} <span></span></small><br>
+		content = content.substring(0,200);
+		result += `<div class="text-muted m-2"> 
+                <div class="card p-4">
+			      <h5 class="mt-0 card-title "><span class="text-danger">Title:</span> <span>${data['articles'][i]['title']}</span></h5>    
+          <!--	<small class="mt-0">By: ${data['articles'][i]['author']} <span></span></small> -->
        
-        
-        <img class='newsImg' width="150" height="100"  src="${data['articles'][i]['urlToImage']}" alt="">
-        <p>
-         ${content} <a href="${data['articles'][i]['url']}">readmore</a>
-        </p>
-		<hr>`;
+					<img height="auto" class='card-img-top newsImg responsive' src="${data['articles'][i]['urlToImage']}" alt="">
+					<p class="card-text text-justify ">
+						${content} <br/> <a class="btn btn-primary card-link" href="${data['articles'][i]['url']}" target="_blank">readmore</a>
+					</p>
+					  </div>
+				   </div>
+		`;
+		
+		
 		
 		i++;
 	}
