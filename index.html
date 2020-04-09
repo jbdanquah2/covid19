@@ -23,11 +23,12 @@
   </head>
   <body> 
    <!-- Image and text -->
-    <nav class="navbar navbar-light bg-light fixed-top mb-2">
+    <nav id="nav" class="navbar navbar-light bg-light fixed-top mb-2">
       <a class="navbar-brand" href="#">
         <img  src="img/2019-coronavirus.png" width="30" height="30" class="d-inline-block align-top" alt="">
         Covid19
       </a> 
+      <a id="newsLink" class="text-danger p-1 pr-3" href="#newsHead"><blink><small>Top <span class="">COVID19</span> <span class="">News</span></small></blink></a>
     </nav>
     
     <div id="page-container" class="container-md d-flex justify-content-center">
@@ -381,19 +382,20 @@
       </div>
       
     </div><hr>
-   <div class="row ">
+   <div class="row" data-spy="scroll" data-target="#nav" data-offset="0">
     <div class="container-md d-flex justify-content-center">
-      <div class="col-md-auto pt-2 text-light ">
-       <center> <div class="container-fluid ">
+      <div id="newsHead" class="col-md-auto pt-2 text-light ">
+       <center> 
+        <div class="container-fluid " >
          
           <h3 class="mb-3 text-center heading text-muted">TOP COVID19 NEWS</h3> 
           <div class="card-group text-dark">
 			  <span id="news">
 	`				
 			  </span>
+          </div>
         </div>
-      
-      </div>  </center>
+      </center>
     </div> 
    </div>
 	 </div>  

@@ -65,15 +65,26 @@ table {
 
 	
 }
-
-
-/*
-.col-md-6{
-  display: flex;
-	align-items: center;
-	justify-content: center
+@-webkit-keyframes blink {
+    from {
+        opacity: 1.0;
+    }
+    to {
+        opacity: 0.3;
+    }
 }
-*/
+
+blink {
+    -webkit-animation-name: blink;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: cubic-bezier(1.0, 0, 0, 1.0);
+    -webkit-animation-duration: 1s;
+}
+
+#newsLink {
+	text-decoration: none;
+}
+
 
 #footer {
   position: absolute;
