@@ -11,6 +11,8 @@ country.addEventListener('keypress', function(e) {
   }
 });
 
+
+
 function getCovid19() {
 	"use strict";
 	let country = document.querySelector("#country").value;
@@ -36,13 +38,13 @@ function callback(data,country) {
 	const flag = data['countryInfo']['flag'];
 	document.querySelector("#flag").src = flag ;
 	document.querySelector("#nation").innerHTML = data['country']; 
-    document.querySelector("#cases").innerHTML = data['cases'];               
-	document.querySelector("#critical").innerHTML = data['critical'];
-	document.querySelector("#active").innerHTML = data['active'];
-	document.querySelector("#deaths").innerHTML = data['deaths'];
-	document.querySelector("#recovered").innerHTML = data['recovered'];
-	document.querySelector("#todayCases").innerHTML = data['todayCases'];
-	document.querySelector("#todayDeaths").innerHTML = data['todayDeaths'];
+    document.querySelector("#cases").innerHTML = data['cases'].toLocaleString();;               
+	document.querySelector("#critical").innerHTML = data['critical'].toLocaleString();
+	document.querySelector("#active").innerHTML = data['active'].toLocaleString();;
+	document.querySelector("#deaths").innerHTML = data['deaths'].toLocaleString();;
+	document.querySelector("#recovered").innerHTML = data['recovered'].toLocaleString();;
+	document.querySelector("#todayCases").innerHTML = data['todayCases'].toLocaleString();;
+	document.querySelector("#todayDeaths").innerHTML = data['todayDeaths'].toLocaleString();;
 	document.querySelector("#casesPerOneMillion").innerHTML = data['casesPerOneMillion'];
 	document.querySelector("#deathsPerOneMillion").innerHTML = data['deathsPerOneMillion'];
 	document.querySelector("#updated").innerHTML = dt;
@@ -94,12 +96,12 @@ function getSummary() {
 }
 
 function summary(data) {
-	document.querySelector('#sCases').innerHTML = data['cases'];
-	document.querySelector('#sDeaths').innerHTML = data['deaths'];
-	document.querySelector('#sRecovered').innerHTML = data['recovered'];
+	document.querySelector('#sCases').innerHTML = data['cases'].toLocaleString();;
+	document.querySelector('#sDeaths').innerHTML = data['deaths'].toLocaleString();;
+	document.querySelector('#sRecovered').innerHTML = data['recovered'].toLocaleString();;
 	document.querySelector('#sUpdated').innerHTML = Date(data['updated']); 
-	document.querySelector('#sActive').innerHTML = data['active'];
-	document.querySelector('#affectedCountries').innerHTML = data['affectedCountries'];
+	document.querySelector('#sActive').innerHTML = data['active'].toLocaleString();
+	document.querySelector('#affectedCountries').innerHTML = data['affectedCountries'].toLocaleString();;
 }
 
 function getNews() {
