@@ -3,6 +3,8 @@ window.onload = function() {
 	getNews();
 };
 
+
+
 //const submit = document.querySelector('#submit');
 const country = document.querySelector('#country');
 country.addEventListener('keypress', function(e) {
@@ -107,7 +109,7 @@ function summary(data) {
 function getNews() {
 	let date = new Date();
 	console.log(date);
-	const url = `https://newsapi.org/v2/everything?qInTitle=covid19&from=${date}&sortBy=popularity&language=en&apiKey=e54bfc507950436d88f35e7ce6814a6b&Size=100&page=1`;
+	const url = `https://newsapi.org/v2/everything?qInTitle=covid19&from=${date}&sortBy=popularity&language=en&apiKey=2ab23803d9704a519bcc1b4758beb80a&Size=12&page=1`;
 	;
 	fetch(url).then(
 	response => {
@@ -140,7 +142,7 @@ function news(data) {
 		}
 		
 
-		result += `<div class="text-muted m-2"> 
+		result += `<div uk-scrollspy="cls: uk-animation-slide-right;" class="text-muted m-2"> 
                 <div class="card p-4">
 			      <h5 class="mt-0 card-title "><span class="text-danger">Title:</span> <span>${data['articles'][i]['title']}</span></h5>    
           <!--	<small class="mt-0">By: ${data['articles'][i]['author']} <span></span></small> -->

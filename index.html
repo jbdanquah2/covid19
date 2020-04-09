@@ -19,13 +19,14 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/alertify.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/uikit.min.css">
     <title>COVID19 | Updates | News!</title>
   </head>
   <body> 
    <!-- Image and text -->
     <nav id="nav" class="navbar navbar-light bg-light fixed-top mb-2">
       <a class="navbar-brand" href="#">
-        <img  src="img/2019-coronavirus.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        <img  src="img/2019-coronavirus.png" width="10" height="20" class="ign-top u-border-circle" alt="">
         Covid19
       </a> 
       <a id="newsLink" class="text-danger p-1 pr-3" href="#newsHead"><blink><small>Top <span class="">COVID19</span> <span class="">News</span></small></blink></a>
@@ -45,7 +46,7 @@
           <p class="mb-3">Search cases with country name</p>
           <div class="col-12">
             <div class="form-group mx-sm-3 mb-2">
-              <input list="countries" name="country"  size="30" required id="country" class="form-control p-2" type="text" placeholder="Enter country eg: China">
+              <input list="countries" name="country"   required id="country" class="form-control p-2" type="text" placeholder="Enter country eg: China">
                	 <datalist id="countries">
 					<option value="Afghanistan" />
 					<option value="Albania" />
@@ -299,7 +300,7 @@
             <small class="text-primary mt-0" id="sUpdated">-</small><br><br>
             <table class="table border table-striped table-hover">
               <thead>
-                <th class="col">Type</th>
+                <th class="col">Globally</th>
                 <th class="col">##</th>
               </thead>
               <tbody>
@@ -385,12 +386,10 @@
     <div class="container-md d-flex justify-content-center">
       <div id="newsHead" class="col-md-auto pt-2 text-light ">
        <center> 
-        <div class="container-fluid " >
-         
-          <h3 class="mb-3 mt-5 text-center heading text-muted">TOP COVID19 NEWS</h3> 
+        <div class="container-fluid " >        
+          <h3 uk-scrollspy="cls: uk-animation-slide-left; repeat: true" class="mb-3 mt-5 text-center heading text-muted">TOP COVID19 NEWS</h3> 
           <div class="card-group text-dark">
-			  <span id="news">
-	`				
+			  <span id="news" >`				
 			  </span>
           </div>
         </div>
@@ -404,6 +403,7 @@
     <script src="js/script.js" type="text/javascript"></script>
     <script src="js/jquery-3.4.1.min.js"> </script>
     <script src="js/alertify.min.js"></script>
+    <script src="js/uikit.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
   </body>
   <footer class="jumbotron mb-0 bg-light">
