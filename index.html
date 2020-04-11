@@ -35,7 +35,7 @@
     
       <div class="row">
         
-        <div id="main" class="col col-md-auto">
+        <div id="main" class="col col-md-12">
           <center>
           <div class=" alert alert-info mt-5 mb-1" role="alert">
           Stay home - <span class="bg-danger text-light pl-1 pr-1 pb-1" >Stop the spread!</span>
@@ -333,42 +333,42 @@
              <small class="hide text-primary mt-0" id="updated">-</small><br>
             <table class="table border table-striped table-hover hide">
               <thead>
-                <th id="nation" class="col">Type</th>
+                <th uk-scrollspy="cls: uk-animation-slide-left; repeat: true" id="nation" class="col text-danger">Type</th>
                 <th class="col">##</th>
               </thead>
-                <tr class="bg-warning">
+                <tr uk-scrollspy="cls: uk-animation-slide-right;" class="bg-warning">
                   <td >Total Cases</td>
-                  <td id="cases">--</td>
+                  <td id="cases">-----</td>
                 </tr>
-                <tr class="table-danger">
+                <tr uk-scrollspy="cls: uk-animation-slide-left;" class="table-danger">
                   <td>Critical Cases</td>
-                  <td id="critical">--</td>
+                  <td id="critical">-----</td>
                 </tr>
-                <tr>
+                <tr uk-scrollspy="cls: uk-animation-slide-right;">
                   <td >Active Cases</td>
-                  <td id="active">--</td>
+                  <td id="active">-----</td>
                 </tr>
-                 <tr>
+                 <tr uk-scrollspy="cls: uk-animation-slide-left;">
                   <td >Deaths</td>
                   <td id="deaths">--</td>
                 </tr>
-                 <tr class="bg-success" >
+                 <tr uk-scrollspy="cls: uk-animation-slide-right; " class="bg-success" >
                   <td >Recovered</td>
                   <td id="recovered">--</td>
                 </tr>
-                 <tr>
+                 <tr uk-scrollspy="cls: uk-animation-slide-left; ">
                   <td >Cases Today</td>
                   <td id="todayCases">--</td>
                 </tr>
-                 <tr>
+                 <tr uk-scrollspy="cls: uk-animation-slide-right;">
                   <td>Deaths Today</td>
                   <td id="todayDeaths">--</td>
                 </tr>
-                 <tr>
+                 <tr uk-scrollspy="cls: uk-animation-slide-left;">
                   <td >Cases Per Million</td>
                   <td id="casesPerOneMillion">--</td>
                 </tr>
-                 <tr>
+                 <tr uk-scrollspy="cls: uk-animation-slide-right;">
                   <td >Deaths Per Million</td>
                   <td id="deathsPerOneMillion">--</td>
                 </tr>
