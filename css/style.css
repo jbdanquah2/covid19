@@ -16,7 +16,7 @@ table {
   color:  #353!important;*/
 }
 
-#nation {
+.nation {
   text-decoration: underline;
 }
 
@@ -80,6 +80,10 @@ table {
     to {
         opacity: 0.3;
     }
+}
+
+table {
+	font-size: 2em;
 }
 
 blink {

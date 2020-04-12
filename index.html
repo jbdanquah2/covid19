@@ -21,7 +21,7 @@
 	  <meta name="keywords" content="coronavirus, covid-19, tracker, dashboard, preperation, prevention, trends, statistics, data" />
 
 	  <meta property="og:type" content="website">
-	  <meta property="og:url" content="https://gigbits.surge.sh">
+	  <meta property="og:url" content="https://jbdanquah2.github.io/covid19">
 	  <meta property="og:title" content="COVID19 | Updates | News!">
 	  <meta property="og:description" content="Live coronavirus cases and news tracker. See data, maps, social media trends, and learn about prevention measures.">
 
@@ -315,17 +315,19 @@
               <img class="mt-2" id="flag" width="250" height="150" src="" alt="">
           </div>
           <div id="summary" class="col-12">
+<!--
             <h4 class="mb-0 pb-0">Summary</h4>
-<!--            <small class="mt-0 pt-0">(Global Level)</small>-->
+            <small class="mt-0 pt-0">(Global Level)</small>
             <p class="mb-1"><small>Below gives a summary of the total cases for all affected countries</small></p>
+-->
             <h5 class="mb-0"><small><b>Last Updated:</b></small></h5>
             <small class="text-primary mt-0" id="sUpdated">-</small><br><br>
             <table class="table border table-striped table-hover">
               <thead>
-                <th class="col text-danger">Globally</th>
-                <th class="col">##</th>
+                <th id="nation" class="col text-dark nation">Global Figures</th>
+                <th class="col text-center">##</th>
               </thead>
-              <tbody>
+              <tbody class="text-muted">
                 <tr class="bg-warning">
                   <td>Cases</td>
                   <td id="sCases">-</td>
@@ -334,7 +336,7 @@
                   <td>Deaths</td>
                   <td id="sDeaths">-</td>
                 </tr>
-                <tr class="table-success">
+                <tr class="bg-success">
                   <td>Recovered</td>
                   <td id="sRecovered">-</td>
                 </tr>
@@ -354,22 +356,23 @@
            <div class="container"><br>
             <h5 class="hide">Last Updated:</h5>
              <small class="hide text-primary mt-0" id="updated">-</small><br>
-            <table class="table border table-striped table-hover hide">
+            <table class="table border table-striped table-hover text-dark-muted hide">
               <thead>
-                <th uk-scrollspy="cls: uk-animation-slide-left; repeat: true" id="nation" class="col text-danger">Type</th>
-                <th class="col">##</th>
+                <th uk-scrollspy="cls: uk-animation-slide-left; repeat: true" id="nation" class="col text-dark nation">Type</th>
+                <th class="col text-center">##</th>
               </thead>
+              <tbody class="text-muted">
                 <tr uk-scrollspy="cls: uk-animation-slide-right;" class="bg-warning">
                   <td >Total Cases</td>
-                  <td id="cases">-----</td>
-                </tr>
-                <tr uk-scrollspy="cls: uk-animation-slide-left;" class="table-danger">
-                  <td>Critical Cases</td>
-                  <td id="critical">-----</td>
+                  <td id="cases">--</td>
                 </tr>
                 <tr uk-scrollspy="cls: uk-animation-slide-right;">
                   <td >Active Cases</td>
-                  <td id="active">-----</td>
+                  <td id="active">--</td>
+                </tr>
+                <tr uk-scrollspy="cls: uk-animation-slide-left;" class="table-danger">
+                  <td>Critical Cases</td>
+                  <td id="critical">--</td>
                 </tr>
                  <tr uk-scrollspy="cls: uk-animation-slide-left;">
                   <td >Deaths</td>
@@ -387,6 +390,7 @@
                   <td>Deaths Today</td>
                   <td id="todayDeaths">--</td>
                 </tr>
+<!--
                  <tr uk-scrollspy="cls: uk-animation-slide-left;">
                   <td >Cases Per Million</td>
                   <td id="casesPerOneMillion">--</td>
@@ -395,7 +399,8 @@
                   <td >Deaths Per Million</td>
                   <td id="deathsPerOneMillion">--</td>
                 </tr>
-              
+-->
+			</tbody>  
           </table>
            </div> 
           </div>
