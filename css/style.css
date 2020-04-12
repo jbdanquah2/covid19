@@ -58,9 +58,6 @@ table {
 	width: 60%;
 }
 
-#main {
-	width: 90%;
-}
 
 @media screen and (min-width: 702px) {
 	#main {
