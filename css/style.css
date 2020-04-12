@@ -13,11 +13,16 @@ nav img {
 }
 
 table {
-  color:  #353!important;*/
+  color:  #353!important;
 }
 
 .nation {
   text-decoration: underline;
+}
+
+#flag {
+  width: 200px!important;
+  height: 80px!important;
 }
 
 .hide {
@@ -26,10 +31,6 @@ table {
 #page-container {
   position: relative;
   min-height: 100vh;
-}
-
-#nation {
-  text-decoration: underline;
 }
 
 #content-wrap {

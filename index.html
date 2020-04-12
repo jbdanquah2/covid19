@@ -54,7 +54,7 @@
       <a id="newsLink" class="text-danger p-1 pr-3" href="#newsHead"><blink><small>Top <span class="">COVID19</span> <span class="">News</span></small></blink></a>
     </nav>
     
-    <div id="page-container" class="container-md d-flex justify-content-center">
+    <div id="page-container" class="container-fluid d-flex justify-content-center">
     
       <div class="row">
         
@@ -312,7 +312,7 @@
 				</datalist>
             </div>            
             <button class="btn btn-primary mb-0 form-control" onclick="getCovid19()" id="submit" >Search</button><br>
-              <img class="mt-2" id="flag" width="250" height="100" src="" alt="">
+              <img class="mt-2 hide" id="flag" src="" alt="">
           </div>
           <div id="summary" class="col-12">
 <!--
@@ -320,9 +320,9 @@
             <small class="mt-0 pt-0">(Global Level)</small>
             <p class="mb-1"><small>Below gives a summary of the total cases for all affected countries</small></p>
 -->
-            <h5 class="mb-0"><small><b>Last Updated:</b></small></h5>
-            <small class="text-primary mt-0" id="sUpdated">-</small><br><br>
-            <table class="table border table-striped table-hover">
+            <h5 class="mt-0 mb-0"><small><b>Last Updated:</b></small></h5>
+            <small class="text-primary mb-0" id="sUpdated">-</small><br><br>
+            <table class="table border table-striped table-hover mt-0">
               <thead>
                 <th class="col text-dark nation">Global</th>
                 <th class="col text-center">##</th>
@@ -354,7 +354,7 @@
           
           
            <div  class="col-12">
-            	<h5 class="hide"><small><b>Last Updated:</b></small></h5>
+            	<h5 class="hide "><small><b>Last Updated:</b></small></h5>
              <small class="hide text-primary mt-0" id="updated">-</small><br>
             <table class="table border table-striped table-hover text-dark-muted hide">
               <thead>
@@ -455,6 +455,7 @@
 </p>
 			<a class="m-2" href="https://newsapi.org">NewsAPI</a>|
 			<a class="m-2" href="https://www.cdc.gov/">CDC</a>|
+			<a class="m-2" href="https://www.cdc.gov/">NovelCOVID API</a>|
 			<a class="m-2" href="https://www.who.int/">WHO</a>
 
         </div>
