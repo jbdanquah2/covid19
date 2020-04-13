@@ -56,16 +56,16 @@
 			<a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
 		  </li>
 		   <li class="nav-item active">
-			<a onclick="notice()" id="usa" class="nav-link" href="#">US Cases <span class="sr-only">(current)</span></a>
+			<a class="nav-link" href="us.html">US Cases <span class="sr-only">(current)</span></a>
 		  </li>
 		  <li class="nav-item active">
 			<a id="newsLink" class="nav-link text-danger" href="#newsHead"><blink><span class="">COVID19</span> <span class="">News</span></blink></a>
 		  </li>
-		  <li  class="nav-item active">
-			<a onclick="notice()" id="info" class="nav-link " href="#">Info</a>
+		  <li class="nav-item active">
+			<a class="nav-link disabled" href="#">Info</a>
 		  </li>
 		   <li class="nav-item active">
-			<a onclick="notice()" id="about" class="nav-link " href="#">About</a>
+			<a class="nav-link disabled" href="#">About</a>
 		  </li>
 		</ul>
 <!--		<span class="m-2" id="buyCoffee"><a class="text-warning" target="_blank" href="https://ko-fi.com/covidd19">Buy me Coffee<i class="fa fa-coffee" style="font-size:20px"></i></a></span>-->
@@ -419,24 +419,24 @@
                   <td >Deaths</td>
                   <td id="deaths">--</td>
                 </tr>
-                 <tr class="bg-success" >
+                 <tr uk-scrollspy="cls: uk-animation-slide-right; " class="bg-success" >
                   <td >Recovered</td>
                   <td id="recovered">--</td>
                 </tr>
-                 <tr>
+                 <tr uk-scrollspy="cls: uk-animation-slide-left; ">
                   <td >CasesToday</td>
                   <td id="todayCases">--</td>
                 </tr>
-                 <tr class="bg-muted" >
+                 <tr class="bg-muted" uk-scrollspy="cls: uk-animation-slide-right;">
                   <td>DeathsToday</td>
                   <td id="todayDeaths">--</td>
                 </tr>
 <!--
-                 <tr >
+                 <tr uk-scrollspy="cls: uk-animation-slide-left;">
                   <td >Cases Per Million</td>
                   <td id="casesPerOneMillion">--</td>
                 </tr>
-                 <tr >
+                 <tr uk-scrollspy="cls: uk-animation-slide-right;">
                   <td >Deaths Per Million</td>
                   <td id="deathsPerOneMillion">--</td>
                 </tr>
@@ -444,63 +444,20 @@
 			</tbody>  
           </table>
           </div>
+ 
+                     
+<!--
+          <div class="col-12">
+           <div class="container"><br>
+            
+           </div> 
+          </div>
+-->
           </center>
         </div>
       </div>
       
-    </div>
-<!--
-    <hr>
-    <div class="row" data-spy="scroll" data-target="#nav" data-offset="0">
-    <div class="container-md d-flex justify-content-center">
-      <h3>US Figures</h3><br><br>
-      <table class="table table-hover table-responsive" class="p-3">             
-		<input class="form-control" id="myInput" type="text" placeholder="Search Expense..."><br>
-		<thead class="thead-dark">
-		  <tr>         
-			<th scope="col">State</th>
-			<th scope="col">Cases</th>
-			<th scope="col">Active</th>
-			<th scope="col">Recovered</th>
-			<th scope="col">Death</th>
-			<th scope="col">DeathsToday</th>  
-			<th scope="col">CasesToday</th> 
-		  </tr>
-		</thead>
-		<tbody id="myTable" class="thead-dark">
-			<tr>
-				<td>New York City</td>
-				<td>23000</td>
-				<td>10000</td>
-				<td>12000</td>
-				<td>1000</td>
-				<td>60</td>
-				<td>0</td>
-			</tr>
-			<tr>
-				<td>LA</td>
-				<td>900</td>
-				<td>123</td>
-				<td>12</td>
-				<td>89</td>
-				<td>45</td>
-				<td>34</td>
-			</tr>
-			<tr>
-				<td>Aowa</td>
-				<td>900</td>
-				<td>123</td>
-				<td>12</td>
-				<td>89</td>
-				<td>45</td>
-				<td>34</td>
-			</tr>
-		</tbody>   
-		</table>                  
-    </div>
-   </div>  
--->
-    <hr>
+    </div><hr>
    <div class="row" data-spy="scroll" data-target="#nav" data-offset="0">
     <div class="container-md d-flex justify-content-center">
       <div id="newsHead" class="col-md-auto pt-2 text-light ">
@@ -513,10 +470,10 @@
           </div>
         </div>
       </center>
-     </div> 
-    </div>
-   </div>  
-<!--<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>-->
+    </div> 
+   </div>
+	 </div>  
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="js/script.js" type="text/javascript"></script>
