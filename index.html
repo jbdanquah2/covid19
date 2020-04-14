@@ -59,34 +59,15 @@
 			<a onclick="notice()" id="usa" class="nav-link" href="#">US Cases <span class="sr-only">(current)</span></a>
 		  </li>
 		  <li class="nav-item active">
-			<a id="newsLink" class="nav-link text-danger" href="#newsHead"><blink><span class="">COVID19</span> <span class="">News</span></blink></a>
+			<a id="newsLink" class="nav-link text-danger" href="news.html"><blink><span class="">COVID19</span> <span class="">News</span></blink></a>
 		  </li>
 		  <li  class="nav-item active">
-			<a onclick="notice()" id="info" class="nav-link " href="#">Info</a>
-		  </li>
-		   <li class="nav-item active">
-			<a onclick="notice()" id="about" class="nav-link " href="#">About</a>
+			<a id="info" class="nav-link " href="about.html">About</a>
 		  </li>
 		</ul>
 	  </div>
 	  <span class="mr-md-5 mr-sm-1" ><a class="text-danger" target="_blank" href="https://ko-fi.com/covidd19">Buy me coffee<i id="buyCoffee" class="fa fa-coffee" style="font-size:20px"></i></a></span>
 	</nav>
-  
-  
-  
-  
-<!--
-    <nav id="nav" class="navbar navbar-light bg-light fixed-top mb-2">
-      <a class="navbar-brand" href="#">
-        <img  src="img/2019-coronavirus.png" width="20" height="30" class="ign-top uk-border-circle" alt="">
-        Covid19 
-      </a> 
-      <span id="buyCoffee"><a target="_blank" href="https://ko-fi.com/covidd19">Buy me Coffee<i class="fa fa-coffee" style="font-size:20px"></i></a></span>
-     
-      <a id="newsLink" class="text-danger p-1 pr-3" href="#newsHead"><blink><small>Top <span class="">COVID19</span> <span class="">News</span></small></blink></a>
-    </nav>
-    
--->
     <div class="text-center alert alert-info mt-5 mb-1" role="alert">
        Stay home - <span class="bg-danger text-light pl-1 pr-1 pb-1" >Stop the spread!</span>
      </div>
@@ -96,9 +77,6 @@
         
         <div id="main" class="col-md-12">
           <center>
-         
-<!--          <h3 class=" mt-0 pt-0">Covid19</h3>-->
-<!--          <span class="text-danger">Realtime Update</span> -->
           <p class="mb-3">Search cases with country name</p>
           <div class="col-12">
             <div class="form-group mx-sm-3 mb-2">
@@ -424,7 +402,6 @@
                   <td>DeathsToday</td>
                   <td id="todayDeaths">--</td>
                 </tr>
-<!--
                  <tr >
                   <td >Cases Per Million</td>
                   <td id="casesPerOneMillion">--</td>
@@ -433,66 +410,13 @@
                   <td >Deaths Per Million</td>
                   <td id="deathsPerOneMillion">--</td>
                 </tr>
--->
 			</tbody>  
           </table>
           </div>
           </center>
         </div>
       </div>
-      
     </div>
-<!--
-    <hr>
-    <div class="row" data-spy="scroll" data-target="#nav" data-offset="0">
-    <div class="container-md d-flex justify-content-center">
-      <h3>US Figures</h3><br><br>
-      <table class="table table-hover table-responsive" class="p-3">             
-		<input class="form-control" id="myInput" type="text" placeholder="Search Expense..."><br>
-		<thead class="thead-dark">
-		  <tr>         
-			<th scope="col">State</th>
-			<th scope="col">Cases</th>
-			<th scope="col">Active</th>
-			<th scope="col">Recovered</th>
-			<th scope="col">Death</th>
-			<th scope="col">DeathsToday</th>  
-			<th scope="col">CasesToday</th> 
-		  </tr>
-		</thead>
-		<tbody id="myTable" class="thead-dark">
-			<tr>
-				<td>New York City</td>
-				<td>23000</td>
-				<td>10000</td>
-				<td>12000</td>
-				<td>1000</td>
-				<td>60</td>
-				<td>0</td>
-			</tr>
-			<tr>
-				<td>LA</td>
-				<td>900</td>
-				<td>123</td>
-				<td>12</td>
-				<td>89</td>
-				<td>45</td>
-				<td>34</td>
-			</tr>
-			<tr>
-				<td>Aowa</td>
-				<td>900</td>
-				<td>123</td>
-				<td>12</td>
-				<td>89</td>
-				<td>45</td>
-				<td>34</td>
-			</tr>
-		</tbody>   
-		</table>                  
-    </div>
-   </div>  
--->
     <hr>
    <div class="row" data-spy="scroll" data-target="#nav" data-offset="0">
     <div class="container-md d-flex justify-content-center">
@@ -509,9 +433,6 @@
      </div> 
     </div>
    </div>  
-<!--<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>-->
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="js/script.js" type="text/javascript"></script>
     <script src="js/alertify.min.js"></script>
     <script src="js/uikit.min.js"></script>
@@ -519,7 +440,6 @@
     <script src="js/bootstrap.min.js"></script>
   </body>
   <footer class="jumbotron mb-0 bg-light">
-
      <center>
         <div class="container-fluid">
          <span><a target="_blank" href="https://twitter.com/yjbdanquah"><i class="fa fa-twitter-square" style="font-size:24px"></i></a></span>
@@ -528,8 +448,7 @@
           <p class="mt-0">Email: yjbdanquah@gmail.com</p>
           <hr>
            <h3>Sources</h3>
-			<p>Local government websites/health departments
-</p>
+			<p>Local government websites/health departments</p>
 			<a class="m-2" href="https://newsapi.org">NewsAPI</a>|
 			<a class="m-2" href="https://www.cdc.gov/">CDC</a>|
 			<a class="m-2" href="https://www.cdc.gov/">NovelCOVID API</a>|
