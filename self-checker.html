@@ -77,14 +77,256 @@
       <div id="selfCheck" class="col-md-auto pt-2 text-light ">
        <center> 
         <div class="container-fluid " >        
-          <h3 uk-scrollspy="cls: uk-animation-slide-left; repeat: true" class="mb-3 mt-5 text-center heading text-muted">Hi, my name is Bot</h3> 
+          <h3 id="bot" uk-scrollspy="cls: uk-animation-slide-left; repeat: true" class="mb-3 mt-2 text-center heading text-muted">Hi, my name is nBot</h3> 
           <div class="card-group text-dark d-flex justify-content-center">
-<!--			  <span id="selfChecker" >-->
-<!--              <center>-->
+
                   <div class="card">
-			          <div class="card-body">
+			          <div id="msg" class="card-body">
 			          	I will help you check yourself if your have covid-19 or not!
 			          </div>
+			           <div class="row d-flex justify-content-center">
+           	      		
+           	      		<div class="col-md-5 col-sm-12 border p-5 aboutAbout">
+			          	<p>Are you Ready?</p>
+			          	<div class="gender text-left text-light bg-info pl-3">
+			          	  <div class="form-group">
+			          	  	<label for="email" class="form-check-label">What's your emaill address</label>
+			          		<input class="form-control p-4" id="email" name="email" type="email" placeholder="Enter email address">
+			          		
+			          	  </div>
+			          	<div class="form-group">
+		          	  		<label for="female" class="form-check-control">What's your phone number?</label>
+			          	  	<input class="form-control p-4" id="phone" name="phone" type="text" placeholder="Enter phone number">
+			          	  	
+			          	</div>
+			          	</div><br>
+			          	<button onclick="move(this)" id="about" type="submit" value="next" class="btn btn-info pl-5 pr-5 About">Next</button>
+			           </div>
+           	      		
+           	      		
+	           	      <!-- about you -->
+		           	   <div id="aboutAbout" class="col-md-5 col-sm-12 border p-5 hide healthHealth">
+		           	   	  <h3>About You</h3><br>
+			         
+			          	<label class="form-control mb-0" for="age">How old are you?</label>
+			          	<select class="form-control bg-info text-light " name="age" id="age">
+			          	    <option disabled selected value="">Select Age</option>
+			          		<option value="0-9">0-9 years</option>
+			          		<option value="10-19">10-19 years</option>
+			          		<option value="20-29">20-29 years</option>
+			          		<option value="30-39">30-39 years</option>
+			          		<option value="40-49">40-49 years</option>
+			          		<option value="50-59">50-59 years</option>
+			          		<option value="60-69">60-69 years</option>
+			          		<option value="70-79">70-79 years</option>
+			          		<option value="80+">80+ years</option>
+			          	</select><br>
+			          	<p>Please tell us your gender</p>
+			          	<div class="gender text-left text-light bg-info pl-3">
+			          		<div class="form-check">
+			          		<input checked value="male" class="form-check-input" id="male" name="gender" type="radio">
+			          		<label for="male" class="form-check-label">Male</label>
+			          	</div>
+			          	<div class="form-check">
+			          	  	<input value="female" class="form-check-input" id="female" name="gender" type="radio">
+			          	  	<label for="female" class="form-check-label">Female</label>
+			          	</div>
+			          	</div><br>
+			          	
+			          	<label class="form-control mb-0" for="region">Please tell us your region</label>
+			          	<select class="form-control bg-info text-light" id="region">
+			          	    <option disabled selected value="0">Select your region</option>
+			          		<option value="ahafo">Ahafo</option>
+			          		<option value="ashanti">Ashanti</option>
+			          		<option value="bono">Bono (Brong Ahafo)</option>
+			          		<option value="bono east">Bono East</option>
+			          		<option value="central">Central</option>
+			          		<option value="eastern">Eastern</option>
+			          		<option value="accra">Greater Accra</option>
+			          		<option value="north east">North East</option>
+							<option value="oti">Oti</option>
+	          				<option value="savannah">Savannah</option>
+	          				<option value="upper east">Upper East</option>
+	          				<option value="upper west">Upper West</option>
+	          				<option value="western">Western</option>
+	          				<option value="western north">Western North</option>		          	
+			          	</select><br>
+			          	<p>Have you recently travelled abroad?</p>
+			          	<div class="travel text-left text-light bg-info pl-3">
+			          		<div class="form-check">
+			          		<input checked name="travel" value="yes" class="form-check-input" id="travelYes"  type="radio">
+			          		<label for="travelYes" class="form-check-label">Yes</label>
+			          	   </div>
+			          	   <div class="form-check">
+			          	  	<input name="travel" value="no" class="form-check-input" id="travelNo" type="radio">
+			          	  	<label for="travelNo" class="form-check-label">No</label>
+			          	</div>
+			          	</div><br>
+			          	<button onclick="move(this)" id="health" type="submit" value="next" class="btn btn-info pl-5 pr-5 Health">Next</button>
+			          	
+			           </div>
+			           
+						<!-- about your heath -->	           	   
+	           	   		<div id="healthHealth" class="col-md-5 col-sm-12 border p-5 hide socialSocial">
+		           	   	  <h3>About Your Health</h3><br>
+			          	
+			          	<p>Do you smoke?</p>
+			          	<div class="smoke text-left text-light bg-info pl-3">
+			          		<div class="form-check">
+			          		<input checked name="smoke" value="yes" class="form-check-input" id="smokeYes" type="radio">
+			          		<label for="smokeYes" class="form-check-label">Yes</label>
+			          	</div>
+			          	<div class="form-check">
+			          	  	<input name="smoke" value="no" class="form-check-input" id="smokeNo" type="radio">
+			          	  	<label for="smokeNo" class="form-check-label">No</label>
+			          	</div>
+			          	</div><br>
+			          	
+			          	<p>Do you have any of the following diseases?</p>
+			          		<ol class="text-left">
+			          			<li>Lung disease</li>
+			          			<li>Asthma</li>
+			          			<li>Heart disease</li>
+			          			<li>Diabetes</li>
+			          			<li>Kidney diseases</li>
+			          			<li>Cancer</li>
+			          		</ol>
+			          	
+			          	<div class="disease text-left text-light bg-info pl-3">
+			          		<div class="form-check">
+			          		<input checked name="disease" value="yes" class="form-check-input" id="deseaseYes" type="radio">
+			          		<label for="deseaseYes" class="form-check-label">Yes</label>
+			          	</div>
+			          	<div class="form-check">
+			          	  	<input name="disease" value="no" class="form-check-input" id="deseaseNo" type="radio">
+			          	  	<label for="deseaseNo" class="form-check-label">No</label>
+			          	</div>
+			          	</div><br>
+			          	<button onclick="move(this)" id="social" type="submit" value="next" class="btn btn-info pl-5 pr-5 Social">Next</button>
+			           </div>
+	           	   
+	           	        <!-- social distancing -->	           	   
+	           	   		<div id="socialSocial" class="col-md-5 col-sm-12 border p-5 hide symptomsSymptoms">
+		           	   	  <h3>Social Distancing</h3><br>
+			          	<p>Have you had close contact with someone suspected of having or had COVID-19 infection, such as family
+			          	members, colleagues or others?</p>
+			          	<div class="social text-left text-light bg-info pl-3">
+			          		<div class="form-check">
+			          		<input name="social" checked value="yes" class="form-check-input" id="socialYes"  type="radio">
+			          		<label for="socialYes" class="form-check-label">Yes</label>
+			          	</div>
+			          	<div class="form-check">
+			          	  	<input name="social" value="no" class="form-check-input" id="socialNo"  type="radio">
+			          	  	<label for="socialNo" class="form-check-label">No</label>
+			          	</div>
+			          	</div><br>
+			          	<button onclick="move(this)" id="symptoms" type="submit" value="next" class="btn btn-info pl-5 pr-5 Symptoms">Next</button>
+			           </div>
+	           	   
+	           	        <!-- check symptoms -->	           	   
+	           	   		<div id="symptomsSymptoms" class="col-md-5 col-sm-12 border p-5 hide assessAssess1">
+		           	   	  <h3>Let's check your symptoms</h3><br>
+			          	<p>Do you have a fever?</p>
+			          	<div class="symptom text-left text-light bg-info pl-3">
+			          		<div class="form-check">
+			          		  <input name="fever" checked value="yes" class="form-check-input" id="feverYes"  type="radio">
+			          		  <label for="feverYes" class="form-check-label">Yes</label>
+			          	    </div>
+			          	    <div class="form-check">
+							  <input name="fever" value="no" class="form-check-input" id="feverNo"  type="radio">
+							  <label for="feverNo" class="form-check-label">No</label>
+			          	    </div>
+			          	</div><br>
+			          	
+			          	<p>Do you have cough - new or continuous?</p>
+			          	<div class="cough text-left text-light bg-info pl-3">
+			          		<div class="form-check">
+			          		  <input checked name="cough" value="yes" class="form-check-input" id="coughYes"  type="radio">
+			          		  <label for="coughYes" class="form-check-label">Yes</label>
+			          	    </div>
+			          	    <div class="form-check">
+			          	  	  <input name="cough" value="no" class="form-check-input" id="coughNo" type="radio">
+			          	  	  <label for="coughNo" class="form-check-label">No</label>
+			          	    </div>
+			          	</div><br>
+			          	
+			          	<p>Do you have shortness of breath?</p>
+			          	<div class="breath text-left text-light bg-info pl-3">
+			          		<div class="form-check">
+			          		<input checked name="breath" value="yes" class="form-check-input" id="breathYes" type="radio">
+			          		<label for="breathYes" class="form-check-label">Yes</label>
+			          	</div>
+			          	<div class="form-check">
+			          	  	<input name="breath" value="no" class="form-check-input" id="breathNo" type="radio">
+			          	  	<label for="breathNo" class="form-check-label">No</label>
+			          	</div>
+			          	</div><br>
+			          	<p>Do you have loss of taste or smell?</p>
+			          	<div class="smell text-left text-light bg-info pl-3">
+			          		<div class="form-check">
+			          		<input checked name="smell" value="yes" class="form-check-input" id="smellYes" type="radio">
+			          		<label for="smellYes" class="form-check-label">Yes</label>
+			          	</div>
+			          	<div class="form-check">
+			          	  	<input name="smell" value="no" class="form-check-input" id="smellNo" type="radio">
+			          	  	<label for="smellNo" class="form-check-label">No</label>
+			          	</div>
+			          	</div><br>
+			          	<label class="form-control mb-0" for="age">How long have you had the symptoms?</label>
+			          	<select name="howLong" class="form-control bg-info text-light " id="howLong">
+			          	    <option disabled selected value="">Select how long</option>
+			          		<option value="1">1 day</option>
+			          		<option value="2">2 days</option>
+			          		<option value="3">3 days</option>
+			          		<option value="4">4 days</option>
+			          		<option value="5">5 days</option>
+			          		<option value="6">6 days</option>
+			          		<option value="7">7 days</option>
+			          		<option value="8">8 days</option>
+			          		<option value="9">9 days</option>
+			          		<option value="10">10 days</option>
+			          		<option value="11">11 days</option>
+			          		<option value="12">12 days</option>
+			          		<option value="13">13 days</option>
+			          		<option value="14">14 days</option>
+			          	</select><br>
+			          	<button onclick="move(this)" id="assess" type="submit"  value="submit" class="btn btn-info pl-5 pr-5 Assess1 ">Submit</button>
+			          	<input id="diagnos" hidden value="0" type="text">
+			           </div>
+	           	       
+	           	       <!-- Risk Assessment 1 -->	           	   
+	           	   		<div id="assessAssess1" class="col-md-5 col-sm-12 border p-5 hide risk1Ass">
+		           	   	  <h3>Risk Assessment</h3><br>
+			          	 <h5 class="text-justify mb-4">Based on the symptoms reported, your current risk of having Covid-19 (Coronavirus) is High</h5>
+							<p class="text-justify">Remain calm, quarantine/separate yourself from household , friends and associates and contact Ghana Health Service helpline 112 for further advice.</p>
+			          	<button onclick="move(this)" id="risk1" value="next" class="btn btn-info pl-5 pr-5 assess1">Next</button>
+			           </div>
+	           	   
+	           	   <!-- Risk Assessment 2 -->	           	   
+	           	   		<div id="assessAssess2" class="col-md-5 col-sm-12 border p-5 hide">
+		           	   	  <h3>Risk Assessment</h3><br>
+			          	 <h5 class="mb-4">Based on the symptoms reported, your current risk of having Covid-19 (Coronavirus) is Medium</h5>
+			          	 <ul>
+			          	 	<li>Please follow the general guidekines for prevention as advised by Ghana Health Service.</li>
+			          	 	<li>Stay home, avoid crowds and contact with others.</li>
+			          	 	<li>Wash your hands with soap and water before touching anything including your eyes, nose and mouth.</li>
+			          	 	<li>Cover your mouth and nose when you cough or sneeze.</li>
+			          	 	<li>Disinfect the objects and surfaces you touch.</li>
+			          	 	<li>Please call GHS to get yourself tested for COVID-19</li>
+			          	 </ul>
+			          	<button onclick="move(this)" id="risk2" value="next" class="btn btn-info pl-5 pr-5 assess2">Next</button>
+			           </div>
+	           	   
+	           	   <!-- End. Thanks you -->	           	   
+	           	   		<div id="assessAssess" class="col-md-5 col-sm-12 border p-5 hide">
+		           	   	  <h3>Thanks You</h3><br>
+			          	 <h5 class="text-justify mb-4">Thank you for your help to our health and care services to slow the COVID-19 outbreak.</h5>
+							<p class="text-justify">Please check and report your symptoms again if you feel any different. Monitoring your health to stay safe during the COVID-19 pandemic is extremely important.</p><br>
+							<a href="self-checker.html"><button type="submit" value="" class="btn btn-info pl-5 pr-5">Try again?</button></a>
+<!--			          	<button value="next" class="btn btn-info pl-5 pr-5 assess1">Next</button>-->
+			           </div>
+		           	   </div>			          	
+<!--			          </div>-->
 			      </div>
 <!--              </center>	-->
 			      			
