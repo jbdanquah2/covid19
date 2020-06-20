@@ -27,6 +27,28 @@ nav img {
   border-radius: 50%;
 }
 
+.navbar-light .navbar-toggler-icon:active {
+  background-color: #333;
+}
+
+#menuButton:focus {
+  border: #333;
+}
+
+@media screen and (max-width: 991px) {
+  
+.navbar-light .navbar-toggler-icon:active {
+  background-color: #333;
+}
+  
+  #ncovid19 ul li {
+    border-radius: 20px;
+    border: 1px solid #333;
+  }
+
+}
+
+
 table {
   color:  #353!important;
 }

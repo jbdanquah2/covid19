@@ -1,5 +1,13 @@
 import { url } from './variables.js'; // import news api
 
+
+const menuButton = document.querySelector('#menuButton');
+
+menuButton.addEventListener('focusout', function(e) {
+	document.querySelector('#ncovid19').classList.remove('show');
+	document.querySelector('#menuButton').classList.add('collapsed');
+	document.querySelector('[aria-expanded]').setAttribute('aria-expanded', false);
+});
 // display news and sumary when page loads
 window.onload = function() {
   getSummary();
