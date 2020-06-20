@@ -95,8 +95,7 @@ function GetAsync(country, callback) {
 // getting summary
 function getSummary() {
 	const urls  = `https://corona.lmao.ninja/v2/all`;
-	fetch(urls).then(
-	response => {
+	fetch(urls).then(response => {
 		if (response.status == 200) {
 			console.log('responser', response);
 			response.json().then(data => {
@@ -114,12 +113,12 @@ function getSummary() {
 
 // display summary
 function summary(data) {
-	document.querySelector('#sCases').innerHTML = data['cases'].toLocaleString();;
-	document.querySelector('#sDeaths').innerHTML = data['deaths'].toLocaleString();;
-	document.querySelector('#sRecovered').innerHTML = data['recovered'].toLocaleString();;
-	document.querySelector('#sUpdated').innerHTML = Date(data['updated']); 
-	document.querySelector('#sActive').innerHTML = data['active'].toLocaleString();
-	document.querySelector('#affectedCountries').innerHTML = data['affectedCountries'].toLocaleString();;
+	document.querySelector('#sCases').innerHTML = data['cases'];
+	document.querySelector('#sDeaths').innerHTML = data['deaths'];
+	document.querySelector('#sRecovered').innerHTML = data['recovered']
+	document.querySelector('#sUpdated').innerHTML = Date(data['updated']).toLocaleString();
+	document.querySelector('#sActive').innerHTML = data['active'];
+	document.querySelector('#affectedCountries').innerHTML = data['affectedCountries'];
 }
 
 // getting covid19 news
@@ -130,8 +129,7 @@ function getNews() {
 		cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
 		credentials: 'same-origin'
     
-     }).then(
-	response => {
+     }).then(response => {
 		if (response.status == 200) {
 			console.log('newsresponse',response);
 			response.json().then(data => {
@@ -150,16 +148,17 @@ function getNews() {
 
 // displyin convid19 news
 function news(data) {
-	let totalResults = data['totalResults'];
-	if (totalResults > 18) {
-		totalResults = 18;
-	}
+	let totalResults = data['articleCount'];
+//	if (totalResults > 10) { // gnews only allows the articles for the free api key.. so this is not needed any longer
+//		totalResults = 18;
+//	}
 	let news = document.querySelector('#news');
 	let result = '';
 	let i = 0;
 	while (i < totalResults) {
-		let urlToImage = data['articles'][i]['urlToImage'];
-		let content = data['articles'][i]['content'];
+		console.log('this', data['articles'][i]['image']);
+		let urlToImage = data['articles'][i]['image'];
+		let content = data['articles'][i]['description'];
 		if (content != null)  {
 			content = trimString(content, 200);
 		}else {
@@ -169,7 +168,7 @@ function news(data) {
 		result += `<div uk-scrollspy="cls: uk-animation-slide-right;" class="text-muted m-2"> 
                 <div class="card p-4">
 			      <h5 class="mt-0 card-title "><span class="text-danger">Title:</span> <span>${data['articles'][i]['title']}</span></h5>    
-          <!--	<small class="mt-0">By: ${data['articles'][i]['author']} <span></span></small> -->
+          <!--	<small class="mt-0">By: ${data['articles'][i]['source']['name']} <span></span></small> -->
        
 					<img height="auto" class='card-img-top newsImg responsive' src="${urlToImage}" alt="">
 					<div class="text-warning"><small><span class="text-danger">Source:</span> ${data['articles'][i]['source']['name']}</small></div>
