@@ -1,13 +1,9 @@
 import { url } from './variables.js'; // import news api
 
+function notice2() {
+	alertify.alert("<span class='pl-1 pr-1 text-light bg-danger'>COVID19</span> | <span class='pl-1 pr-1 text-light bg-warning'>NEWS</span> ","This feature is still under development!");
+}
 
-const menuButton = document.querySelector('#menuButton');
-
-menuButton.addEventListener('focusout', function(e) {
-	document.querySelector('#ncovid19').classList.remove('show');
-	document.querySelector('#menuButton').classList.add('collapsed');
-	document.querySelector('[aria-expanded]').setAttribute('aria-expanded', false);
-});
 // display news and sumary when page loads
 window.onload = function() {
   getSummary();
@@ -16,10 +12,6 @@ window.onload = function() {
 
 function required() {
 	alertify.alert("<span class='pl-1 pr-1 text-light bg-danger'>COVID19</span> | <span class='pl-1 pr-1 text-light bg-warning'>Self-Checker!</span> ","Please answer every questions!");
-}
-
-function notice() {
-	alertify.alert("<span class='pl-1 pr-1 text-light bg-danger'>COVID19</span> | <span class='pl-1 pr-1 text-light bg-warning'>NEWS</span> ","This feature is still under development!")
 }
 
 document.querySelector('#submitSearch').addEventListener('click', getCovid19);
@@ -164,7 +156,7 @@ function news(data) {
 	let result = '';
 	let i = 0;
 	while (i < totalResults) {
-		console.log('this', data['articles'][i]['image']);
+		//console.log('this', data['articles'][i]['image']);
 		let urlToImage = data['articles'][i]['image'];
 		let content = data['articles'][i]['description'];
 		if (content != null)  {
