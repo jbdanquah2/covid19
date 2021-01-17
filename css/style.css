@@ -1,26 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+
 body {
-    background-color: #fefefe;
-    color:  #453;  
-/*    font-family: 'Noto Sans JP', sans-serif;*/
-	font-family: 'Oswald', sans-serif;
-/*    font-family: "Helvetica Neue", Arial, sans-serif;*/
-    height: 100%;
-	overflow-x: hidden;
+  background-color: #fefefe;
+  color: #453;
+  /*    font-family: 'Noto Sans JP', sans-serif;*/
+  font-family: 'Oswald', sans-serif;
+  /*    font-family: "Helvetica Neue", Arial, sans-serif;*/
+  height: 100%;
+  overflow-x: hidden;
 }
 
 .navbar-toggler-icon {
   width: 20px !important;
-  height:20px !important;
+  height: 20px !important;
 }
 
 .nav-item {
-   min-width: 71px;
-   text-align: center;
-   color: #fefefe!important; 
-   margin: 1px;
-   border: 1px solid #fefefe;
+  min-width: 71px;
+  text-align: center;
+  color: #fefefe !important;
+  margin: 1px;
+  border: 1px solid #fefefe;
 }
 
 nav img {
@@ -36,11 +37,11 @@ nav img {
 }
 
 @media screen and (max-width: 991px) {
-  
-.navbar-light .navbar-toggler-icon:active {
-  background-color: #333;
-}
-  
+
+  .navbar-light .navbar-toggler-icon:active {
+    background-color: #333;
+  }
+
   #ncovid19 ul li {
     border-radius: 20px;
     border: 1px solid #333;
@@ -50,7 +51,7 @@ nav img {
 
 
 table {
-  color:  #353!important;
+  color: #353 !important;
 }
 
 .nation {
@@ -58,118 +59,140 @@ table {
 }
 
 #flag {
-  width: 200px!important;
-  height: 80px!important;
+  width: 200px !important;
+  height: 80px !important;
 }
 
 .hide {
-    display: none;
+  display: none;
 }
+
 #page-container {
   position: relative;
   min-height: 100vh;
 }
 
 #content-wrap {
-  padding-bottom: 2.5rem;   
+  padding-bottom: 2.5rem;
 }
 
 #newsDiv {
-  font-family:  Verdana, arial, sans-serif; sans-serif;
+  font-family: Verdana, arial, sans-serif;
   border-radius: 7%;
   overflow: hidden;
 }
 
 .heading {
-	font-weight: 800;	
+  font-weight: 800;
 }
 
 .newsImg {
   border-radius: 10%;
   max-height: 300px;
-  height: auto !important;	
-	
+  height: auto !important;
+
 }
 
 .card {
-	border: none;
-	width: 60%;
+  border: none;
+  width: 60%;
 }
 
 
 @media screen and (min-width: 702px) {
-	#main {
-		width: 500px!important;
-	}
+  #main {
+    width: 500px !important;
+  }
 }
 
 @media screen and (max-width: 700px) {
-	.card {
-		width: 100% !important;
-	}
+  .card {
+    width: 100% !important;
+  }
 
 
-	
+
 }
-@-webkit-keyframes blink {
-    from {
-        opacity: 1.0;
-    }
-    to {
-        opacity: 0.3;
-    }
+
+@keyframes blink {
+  from {
+    opacity: 1.0;
+  }
+
+  to {
+    opacity: 0.3;
+  }
 }
 
 table {
-	font-size: 2em;
+  font-size: 2em;
 }
 
 blink {
-    -webkit-animation-name: blink;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-timing-function: cubic-bezier(1.0, 0, 0, 1.0);
-    -webkit-animation-duration: 1s;
+  animation-name: blink;
+  -webkit-animation-name: blink;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(1.0, 0, 0, 1.0);
+  -webkit-animation-timing-function: cubic-bezier(1.0, 0, 0, 1.0);
+  animation-duration: 1s;
+  -webkit-animation-duration: 1s;
 }
 
 #buyCoffee {
-	-webkit-animation-name: blink;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-timing-function: cubic-bezier(1.0, 0, 0, 1.0);
-    -webkit-animation-duration: 5s;
+  animation-name: blink;
+  -webkit-animation-name: blink;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(1.0, 0, 0, 1.0);
+  -webkit-animation-timing-function: cubic-bezier(1.0, 0, 0, 1.0);
+  animation-duration: 5s;
+  -webkit-animation-duration: 5s;
 }
 
 #newsLink {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 
 #myBtn {
-  display: none; /* Hidden by default */
-  position: fixed; /* Fixed/sticky position */
-  bottom: 20px; /* Place the button at the bottom of the page */
-  right: 30px; /* Place the button 30px from the right */
-  z-index: 99; /* Make sure it does not overlap */
-  border: none; /* Remove borders */
-  outline: none; /* Remove outline */
-  background-color: red; /* Set a background color */
-  color: white; /* Text color */
-  cursor: pointer; /* Add a mouse pointer on hover */
-  padding: 15px; /* Some padding */
-  border-radius: 10px; /* Rounded corners */
-  font-size: 18px; /* Increase font size */
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Fixed/sticky position */
+  bottom: 20px;
+  /* Place the button at the bottom of the page */
+  right: 30px;
+  /* Place the button 30px from the right */
+  z-index: 99;
+  /* Make sure it does not overlap */
+  border: none;
+  /* Remove borders */
+  outline: none;
+  /* Remove outline */
+  background-color: red;
+  /* Set a background color */
+  color: white;
+  /* Text color */
+  cursor: pointer;
+  /* Add a mouse pointer on hover */
+  padding: 15px;
+  /* Some padding */
+  border-radius: 10px;
+  /* Rounded corners */
+  font-size: 18px;
+  /* Increase font size */
 }
 
 ul {
   text-align: left;
-  
+
 }
-
-
 
 #footer {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 2.5rem;            /* Footer height */
+  height: 2.5rem;
+  /* Footer height */
 }
-
