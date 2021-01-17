@@ -1,135 +1,158 @@
 <!doctype html>
 <html lang="en">
-  <head>
-     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162779162-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
 
-      gtag('config', 'UA-162779162-1');
-    </script>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-  	
-	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162779162-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
-	  <meta name="description" content="Live coronavirus dashboard tracker. See data, maps, social media trends, and learn about prevention measures." />
-	  <meta name="keywords" content="coronavirus, covid-19, tracker, dashboard, preperation, prevention, trends, statistics, data" />
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
 
-	  <meta property="og:type" content="website">
-	  <meta property="og:url" content="https://jbdanquah2.github.io/covid19">
-	  <meta property="og:title" content="COVID19 | Updates | News!">
-	  <meta property="og:description" content="Live coronavirus cases and news tracker. See data, maps, social media trends, and learn about prevention measures.">
+    gtag('config', 'UA-162779162-1');
+  </script>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
-	  <meta name="twitter:title" content="COVID19 - Coronavirus Tracker">
-	  <meta name="twitter:description" content="Live coronavirus dashboard. See data, maps, social media trends, and learn about prevention measures.">
-	  
-	  <meta name="twitter:creator" content="@yjbdanquah">
-	  <meta name="twitter:card" content="summary_large_image"/>
-  	
-  	
-   	<link rel="icon" href="img/favicon.ico" sizes="16x16" type="image/png">
-    <!--  CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/uikit.min.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/alertify.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    
-    <title>COVID19 | Updates | News!</title>
-  </head>
-  <body> 
-  	<nav class="navbar navbar-expand-lg navbar-light table-light text-dark fixed-top mb-2">
-	  <a class="navbar-brand" href="index.html"><img  src="img/2019-coronavirus.png" width="20" height="30" alt="">
-        Covid19 </a>
-	  <button class="navbar-toggler border border-dark" type="button" data-toggle="collapse" data-target="#ncovid19" aria-controls="ncovid19" aria-expanded="false" aria-label="Toggle navigation">
-		<span id="menu" class="navbar-toggler-icon"></span>
-	  </button> 
-		
-	  <div class="collapse navbar-collapse" id="ncovid19">
-		<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-		  <li class="nav-item active">
-			<a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-		  </li>
-		   <li class="nav-item active">
-			<a onclick="notice()" id="usa" class="nav-link" href="#">US Cases <span class="sr-only">(current)</span></a>
-		  </li>
-		  <li class="nav-item active">
-			<a id="newsLink" class="nav-link text-danger" href="news.html"><blink><span class="">COVID19</span> <span class="">News</span></blink></a>
-		  </li>
-		   <li  class="nav-item active">
-			<a id="info" class="nav-link " href="self-checker.html">Self Checker</a>
-		  </li>
-		  <li  class="nav-item active">
-			<a  id="info" class="nav-link " href="about.html">About</a>
-		  </li>
-		</ul>
-	  </div>
-<!--	  <span class="mr-md-5 mr-sm-1" ><a class="text-danger" target="_blank" href="https://ko-fi.com/covidd19">Buy me coffee<i id="buyCoffee" class="fa fa-coffee" style="font-size:20px"></i></a></span>-->
-   </nav>
-    <div class="text-center alert alert-info mt-5 mb-1" role="alert">
-       Stay home - <span class="bg-danger text-light pl-1 pr-1 pb-1" >Stop the spread!</span>
-     </div>
-    <div id="page-container" class="container-fluid d-flex justify-content-center">
-    
-      <div class="row">
-        
-        <div id="main" class="col-md-12">
-          <center>
-            <h3>What is COVID-19?</h3>
-            <p>Coronavirus disease 2019 (COVID-19) is a respiratory illness that can spread from person to person. The virus that causes COVID-19 is a novel coronavirus that was first identified during an investigation into an outbreak in Wuhan, China.</p>
-            <p>Patients with COVID-19 have had mild to severe respiratory illness with symptoms of: fever, cough, and shortness of breath</p>
-            <h3>Source Of Data</h3>
-            <p>The Live Data is coming from WorldoMeter and 2019 Novel Coronavirus Visual Repository managed by the Johns Hopkins University Center for Systems Science and Engineering (JHU CSSE). Other data sources are official Ministries of Government websites, WorldoMeter, World Health Organization (WHO). All credits to them.</p>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-            <h3>Let's Fight Corona Together</h3>
-            <ul>
-                <li>Stay Home - Stop The Spread!</li>
-                <li>Keep Social Distancing.!</li>
-                <li>Help others during this crisis and do not hoard supplies and over stock.</li>
-                <li>Be a responsible citizen</li>
-                <li>Show compassion in this hard time.</li>
-                <li>Be considerate. Help others, call your loved ones during locked down.</li>
-                <li>We will get through this. TOGETHER!</li>
-            </ul>
-            <br>
-            <h4>Your Support is Appreciated</h4>
-            <small><p>You can kindly support me with this project by choosing an option below</p></small>
-            <a type="button" class="btn btn-danger text-light" target="_blank" href="https://ko-fi.com/covidd19">Buy me coffee<i id="buyCoffee" class="fa fa-coffee" style="font-size:20px"></i></a><br><br>
-            <h3>PayPal</h3>
-            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-              <input type="hidden" name="cmd" value="_s-xclick" />
-              <input type="hidden" name="hosted_button_id" value="XNESKNEM3EVXJ" />
-              <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-              <img alt="" border="0" src="https://www.paypal.com/en_LS/i/scr/pixel.gif" width="1" height="1" />
-            </form>
+  <meta name="description"
+    content="Live coronavirus dashboard tracker. See data, maps, social media trends, and learn about prevention measures." />
+  <meta name="keywords"
+    content="coronavirus, covid-19, tracker, dashboard, preperation, prevention, trends, statistics, data" />
 
-          </center>
-        </div>
-      </div>
-      
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jbdanquah2.github.io/covid19">
+  <meta property="og:title" content="COVID19 | Updates | News!">
+  <meta property="og:description"
+    content="Live coronavirus cases and news tracker. See data, maps, social media trends, and learn about prevention measures.">
+
+  <meta name="twitter:title" content="COVID19 - Coronavirus Tracker">
+  <meta name="twitter:description"
+    content="Live coronavirus dashboard. See data, maps, social media trends, and learn about prevention measures.">
+
+  <meta name="twitter:creator" content="@yjbdanquah">
+  <meta name="twitter:card" content="summary_large_image" />
+
+
+  <link rel="icon" href="img/favicon.ico" sizes="16x16" type="image/png">
+  <!--  CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/uikit.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/alertify.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>COVID19 | Updates | News!</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light table-light text-dark fixed-top mb-2">
+    <a class="navbar-brand" href="index.html"><img src="img/2019-coronavirus.png" width="20" height="30" alt="">
+      Covid19 </a>
+    <button class="navbar-toggler border border-dark" type="button" data-toggle="collapse" data-target="#ncovid19"
+      aria-controls="ncovid19" aria-expanded="false" aria-label="Toggle navigation">
+      <span id="menu" class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="ncovid19">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <!-- <li class="nav-item active">
+          <a onclick="notice()" id="usa" class="nav-link" href="#">US Cases <span class="sr-only">(current)</span></a>
+        </li> -->
+        <li class="nav-item active">
+          <a id="newsLink" class="nav-link text-danger" href="news.html">
+            <blink><span class="">COVID19</span> <span class="">News</span></blink>
+          </a>
+        </li>
+        <li class="nav-item active">
+          <a id="info" class="nav-link " href="self-checker.html">Self Checker</a>
+        </li>
+        <li class="nav-item active">
+          <a id="info" class="nav-link " href="about.html">About</a>
+        </li>
+      </ul>
     </div>
-    <script src="js/script.js" type="module"></script>
-    <script src="js/alertify.min.js"></script>
-    <script src="js/uikit.min.js"></script>
-    <script src="js/jquery-3.4.1.min.js"> </script>
-    <script src="js/bootstrap.min.js"></script>
-  </body>
-  <footer class="jumbotron mb-0 bg-light">
+    <!--	  <span class="mr-md-5 mr-sm-1" ><a class="text-danger" target="_blank" href="https://ko-fi.com/covidd19">Buy me coffee<i id="buyCoffee" class="fa fa-coffee" style="font-size:20px"></i></a></span>-->
+  </nav>
+  <div class="text-center alert alert-info mt-5 mb-1" role="alert">
+    Stay home - <span class="bg-danger text-light pl-1 pr-1 pb-1">Stop the spread!</span>
+  </div>
+  <div id="page-container" class="container-fluid d-flex justify-content-center">
 
-     <center>
-        <div class="container-fluid">
-         <span><a target="_blank" href="https://twitter.com/yjbdanquah"><i class="fa fa-twitter-square" style="font-size:24px"></i></a></span>
-         <span><a target="_blank" href="https://web.facebook.com/johndanquahboateng"><i class="fa fa-facebook-square" style="font-size:24px"></i></a></span><br>
-          <span class="mb-0">Created by: jbdanquah</span><br>
-          <p class="mt-0">Email: yjbdanquah@gmail.com</p>
-          <hr>
-<!--           <h3>Sources</h3>-->
-<!--
+    <div class="row">
+
+      <div id="main" class="col-md-12">
+        <center>
+          <h3>What is COVID-19?</h3>
+          <p>Coronavirus disease 2019 (COVID-19) is a respiratory illness that can spread from person to person. The
+            virus that causes COVID-19 is a novel coronavirus that was first identified during an investigation into an
+            outbreak in Wuhan, China.</p>
+          <p>Patients with COVID-19 have had mild to severe respiratory illness with symptoms of: fever, cough, and
+            shortness of breath</p>
+          <h3>Source Of Data</h3>
+          <p>The Live Data is coming from WorldoMeter and 2019 Novel Coronavirus Visual Repository managed by the Johns
+            Hopkins University Center for Systems Science and Engineering (JHU CSSE). Other data sources are official
+            Ministries of Government websites, WorldoMeter, World Health Organization (WHO). All credits to them.</p>
+
+          <h3>Let's Fight Corona Together</h3>
+          <ul>
+            <li>Stay Home - Stop The Spread!</li>
+            <li>Keep Social Distancing.!</li>
+            <li>Help others during this crisis and do not hoard supplies and over stock.</li>
+            <li>Be a responsible citizen</li>
+            <li>Show compassion in this hard time.</li>
+            <li>Be considerate. Help others, call your loved ones during locked down.</li>
+            <li>We will get through this. TOGETHER!</li>
+          </ul>
+          <br>
+          <h4>Your Support is Appreciated</h4>
+          <small>
+            <p>You can kindly support me with this project by choosing an option below</p>
+          </small>
+          <a type="button" class="btn btn-danger text-light" target="_blank" href="https://ko-fi.com/covidd19">Buy me
+            coffee<i id="buyCoffee" class="fa fa-coffee" style="font-size:20px"></i></a><br><br>
+          <h3>PayPal</h3>
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_s-xclick" />
+            <input type="hidden" name="hosted_button_id" value="XNESKNEM3EVXJ" />
+            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0"
+              name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+            <img alt="" border="0" src="https://www.paypal.com/en_LS/i/scr/pixel.gif" width="1" height="1" />
+          </form>
+
+        </center>
+      </div>
+    </div>
+
+  </div>
+  <script src="js/script.js" type="text/javascript"></script>
+  <script src="js/alertify.min.js"></script>
+  <script src="js/uikit.min.js"></script>
+  <script src="js/jquery-3.4.1.min.js"> </script>
+  <script src="js/bootstrap.min.js"></script>
+</body>
+<footer class="jumbotron mb-0 bg-light">
+
+  <center>
+    <div class="container-fluid">
+      <span><a target="_blank" href="https://twitter.com/yjbdanquah"><i class="fa fa-twitter-square"
+            style="font-size:24px"></i></a></span>
+      <span><a target="_blank" href="https://web.facebook.com/johndanquahboateng"><i class="fa fa-facebook-square"
+            style="font-size:24px"></i></a></span><br>
+      <span class="mb-0">Created by: jbdanquah</span><br>
+      <p class="mt-0">Email: yjbdanquah@gmail.com</p>
+      <hr>
+      <!--           <h3>Sources</h3>-->
+      <!--
 			<p>Local government websites/health departments</p>
 			<a class="m-2" href="https://newsapi.org">NewsAPI</a>|
 			<a class="m-2" href="https://www.cdc.gov/">CDC</a>|
@@ -137,8 +160,9 @@
 			<a class="m-2" href="https://www.who.int/">WHO</a>
 -->
 
-        </div>
-     </center>
-  
-  </footer>
+    </div>
+  </center>
+
+</footer>
+
 </html>

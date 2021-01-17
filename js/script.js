@@ -1,4 +1,5 @@
-import { url } from './variables.js'; // import news api
+// import { url } from './variables.js'; // import news api
+const url = `https://gnews.io/api/v3/search?q=coronavirus&in=all&token=f0c3f65254d65edb5939f814afc4350b`
 
 function notice2() {
 	alertify.alert("<span class='pl-1 pr-1 text-light bg-danger'>COVID19</span> | <span class='pl-1 pr-1 text-light bg-warning'>NEWS</span> ","This feature is still under development!");
@@ -192,6 +193,15 @@ function trimString(str, n){
 
 
 
+// self checker, moving from to another
+function move(elem) {
+	if (ready(elem)) {
+		next(elem);
+	}
+	
+}
+
+
 // Self-checker form algorithm
 function next(elem) {
 	let id = elem.id;
@@ -314,15 +324,6 @@ return true;
 }
 
 
-// self checker, moving from to another
-function move(elem) {
-	if (ready(elem)) {
-		next(elem);
-	}
-	
-}
-
-
 // self check value of the diagnosis
 function checkCovid(n) {
 	let val = document.querySelector('#diagnos').value;
@@ -334,35 +335,35 @@ return true;
 
 // writing the email and phone to file
 
-function WriteToFile() {
-	     // Get the data from each element on the form.
+// function WriteToFile() {
+// 	     // Get the data from each element on the form.
     	
-        const email = document.getElementById('email');
-        const phone = document.getElementById('phone');
+//         const email = document.getElementById('email');
+//         const phone = document.getElementById('phone');
        
         
-        // This variable stores all the data.
-        let data = 
-            '\r Email: ' + email.value + ' \r\n ' +  
-            'Phone: ' + phone.value;
+//         // This variable stores all the data.
+//         let data = 
+//             '\r Email: ' + email.value + ' \r\n ' +  
+//             'Phone: ' + phone.value;
         
-        // Convert the text to BLOB.
-        const textToBLOB = new Blob([data], { type: 'text/plain' });
-        const sFileName = 'formData.txt';	   // The file to save the data.
+//         // Convert the text to BLOB.
+//         const textToBLOB = new Blob([data], { type: 'text/plain' });
+//         const sFileName = 'formData.txt';	   // The file to save the data.
 
-        let newLink = document.createElement("a");
-        newLink.download = sFileName;
+//         let newLink = document.createElement("a");
+//         newLink.download = sFileName;
 
-        if (window.webkitURL != null) {
-            newLink.href = window.webkitURL.createObjectURL(textToBLOB);
-        }
-        else {
-            newLink.href = window.URL.createObjectURL(textToBLOB);
-            newLink.style.display = "none";
-            document.body.appendChild(newLink);
-        }
+//         if (window.webkitURL != null) {
+//             newLink.href = window.webkitURL.createObjectURL(textToBLOB);
+//         }
+//         else {
+//             newLink.href = window.URL.createObjectURL(textToBLOB);
+//             newLink.style.display = "none";
+//             document.body.appendChild(newLink);
+//         }
 
-        newLink.click(); 
+//         newLink.click(); 
 		
    
- }
+//  }

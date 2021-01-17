@@ -1,465 +1,472 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162779162-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
 
-      gtag('config', 'UA-162779162-1');
-    </script>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162779162-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-162779162-1');
+	</script>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-  	
-	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	  <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-	  <meta name="description" content="Live coronavirus dashboard tracker. See data, maps, social media trends, and learn about prevention measures." />
-	  <meta name="keywords" content="coronavirus, covid-19, tracker, dashboard, preperation, prevention, trends, statistics, data" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-	  <meta property="og:type" content="website">
-	  <meta property="og:url" content="https://jbdanquah2.github.io/covid19">
-	  <meta property="og:title" content="COVID19 | Updates | News!">
-	  <meta property="og:description" content="Live coronavirus cases and news tracker. See data, maps, social media trends, and learn about prevention measures.">
+	<meta name="description"
+		content="Live coronavirus dashboard tracker. See data, maps, social media trends, and learn about prevention measures." />
+	<meta name="keywords"
+		content="coronavirus, covid-19, tracker, dashboard, preperation, prevention, trends, statistics, data" />
 
-	  <meta name="twitter:title" content="COVID19 - Coronavirus Tracker">
-	  <meta name="twitter:description" content="Live coronavirus dashboard. See data, maps, social media trends, and learn about prevention measures.">
-	  
-	  <meta name="twitter:creator" content="@yjbdanquah">
-	  <meta name="twitter:card" content="summary_large_image"/>
-  	
-  	
-   	<link rel="icon" href="img/favicon.ico" sizes="16x16" type="image/png">
-    <!--  CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/uikit.min.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/alertify.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    
-    <title>COVID19 | Updates | News!</title>
-  </head>
-  <body> 
-  	<nav class="navbar navbar-expand-lg navbar-light table-light text-dark fixed-top mb-2">
-	  <a class="navbar-brand" href="index.html"><img  src="img/2019-coronavirus.png" width="20" height="30" alt="">
-        Covid19 </a>
-	  <button id="menuButton" class="navbar-toggler border border-dark" type="button" data-toggle="collapse" data-target="#ncovid19" aria-controls="ncovid19" aria-expanded="false" aria-label="Toggle navigation">
-		<span id="menu" class="navbar-toggler-icon"></span>
-	  </button> 
-		
-	  <div class="collapse navbar-collapse" id="ncovid19">
-		<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-		  <li class="nav-item active">
-			<a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-		  </li>
-		   <li class="nav-item active">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://jbdanquah2.github.io/covid19">
+	<meta property="og:title" content="COVID19 | Updates | News!">
+	<meta property="og:description"
+		content="Live coronavirus cases and news tracker. See data, maps, social media trends, and learn about prevention measures.">
+
+	<meta name="twitter:title" content="COVID19 - Coronavirus Tracker">
+	<meta name="twitter:description"
+		content="Live coronavirus dashboard. See data, maps, social media trends, and learn about prevention measures.">
+
+	<meta name="twitter:creator" content="@yjbdanquah">
+	<meta name="twitter:card" content="summary_large_image" />
+
+
+	<link rel="icon" href="img/favicon.ico" sizes="16x16" type="image/png">
+	<!--  CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/uikit.min.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/alertify.min.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	<title>COVID19 | Updates | News!</title>
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light table-light text-dark fixed-top mb-2">
+		<a class="navbar-brand" href="index.html"><img src="img/2019-coronavirus.png" width="20" height="30" alt="">
+			Covid19 </a>
+		<button id="menuButton" class="navbar-toggler border border-dark" type="button" data-toggle="collapse"
+			data-target="#ncovid19" aria-controls="ncovid19" aria-expanded="false" aria-label="Toggle navigation">
+			<span id="menu" class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="ncovid19">
+			<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+				<li class="nav-item active">
+					<a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+				</li>
+				<!-- <li class="nav-item active">
 			<a onclick="notice2()" id="usa" class="nav-link" href="#">US Cases <span class="sr-only">(current)</span></a>
-		  </li>
-		  <li class="nav-item active">
-			<a id="newsLink" class="nav-link text-danger" href="news.html"><blink><span class="">COVID19</span> <span class="">News</span></blink></a>
-		  </li>
-		  <li  class="nav-item active">
-			<a id="info" class="nav-link " href="self-checker.html">Self Checker</a>
-		  </li>
-		  <li  class="nav-item active">
-			<a id="info" class="nav-link " href="about.html">About</a>
-		  </li>
-		</ul>
-	  </div>
-<!--	  <span class="mr-md-5 mr-sm-1" ><a class="text-danger" target="_blank" href="https://ko-fi.com/covidd19">Buy me coffee<i id="buyCoffee" class="fa fa-coffee" style="font-size:20px"></i></a></span>-->
+		  </li> -->
+				<li class="nav-item active">
+					<a id="newsLink" class="nav-link text-danger" href="news.html">
+						<blink><span class="">COVID19</span> <span class="">News</span></blink>
+					</a>
+				</li>
+				<li class="nav-item active">
+					<a id="info" class="nav-link " href="self-checker.html">Self Checker</a>
+				</li>
+				<li class="nav-item active">
+					<a id="info" class="nav-link " href="about.html">About</a>
+				</li>
+			</ul>
+		</div>
+		<!--	  <span class="mr-md-5 mr-sm-1" ><a class="text-danger" target="_blank" href="https://ko-fi.com/covidd19">Buy me coffee<i id="buyCoffee" class="fa fa-coffee" style="font-size:20px"></i></a></span>-->
 	</nav>
-    <div class="text-center alert alert-info mt-5 mb-1" role="alert">
-       Stay home - <span class="bg-danger text-light pl-1 pr-1 pb-1" >Stop the spread!</span>
-     </div>
-    <div id="page-container" class="container-fluid d-flex justify-content-center">
-    
-      <div class="row">
-        
-        <div id="main" class="col-md-12">
-          <center>
-          <p class="mb-3">Search cases with country name</p>
-          <div class="col-12">
-            <div class="form-group mx-sm-3 mb-2">
-              <input list="countries" name="country"   required id="country" class="form-control p-2" type="text" placeholder="Enter country eg: China">
-               	 <datalist id="countries">
-					<option value="Afghanistan" />
-					<option value="Albania" />
-					<option value="Algeria" />
-					<option value="American Samoa" />
-					<option value="Andorra" />
-					<option value="Angola" />
-					<option value="Anguilla" />
-					<option value="Antarctica" />
-					<option value="Antigua and Barbuda" />
-					<option value="Argentina" />
-					<option value="Armenia" />
-					<option value="Aruba" />
-					<option value="Australia" />
-					<option value="Austria" />
-					<option value="Azerbaijan" />
-					<option value="Bahamas" />
-					<option value="Bahrain" />
-					<option value="Bangladesh" />
-					<option value="Barbados" />
-					<option value="Belarus" />
-					<option value="Belgium" />
-					<option value="Belize" />
-					<option value="Benin" />
-					<option value="Bermuda" />
-					<option value="Bhutan" />
-					<option value="Bolivia" />
-					<option value="Bosnia and Herzegovina" />
-					<option value="Botswana" />
-					<option value="Bouvet Island" />
-					<option value="Brazil" />
-					<option value="British Indian Ocean Territory" />
-					<option value="Brunei Darussalam" />
-					<option value="Bulgaria" />
-					<option value="Burkina Faso" />
-					<option value="Burundi" />
-					<option value="Cambodia" />
-					<option value="Cameroon" />
-					<option value="Canada" />
-					<option value="Cape Verde" />
-					<option value="Cayman Islands" />
-					<option value="Central African Republic" />
-					<option value="Chad" />
-					<option value="Chile" />
-					<option value="China" />
-					<option value="Christmas Island" />
-					<option value="Cocos (Keeling) Islands" />
-					<option value="Colombia" />
-					<option value="Comoros" />
-					<option value="Congo" />
-					<option value="Congo, The Democratic Republic of The" />
-					<option value="Cook Islands" />
-					<option value="Costa Rica" />
-					<option value="Cote D'ivoire" />
-					<option value="Croatia" />
-					<option value="Cuba" />
-					<option value="Cyprus" />
-					<option value="Czech Republic" />
-					<option value="Denmark" />
-					<option value="Djibouti" />
-					<option value="Dominica" />
-					<option value="Dominican Republic" />
-					<option value="Ecuador" />
-					<option value="Egypt" />
-					<option value="El Salvador" />
-					<option value="Equatorial Guinea" />
-					<option value="Eritrea" />
-					<option value="Estonia" />
-					<option value="Ethiopia" />
-					<option value="Falkland Islands (Malvinas)" />
-					<option value="Faroe Islands" />
-					<option value="Fiji" />
-					<option value="Finland" />
-					<option value="France" />
-					<option value="French Guiana" />
-					<option value="French Polynesia" />
-					<option value="French Southern Territories" />
-					<option value="Gabon" />
-					<option value="Gambia" />
-					<option value="Georgia" />
-					<option value="Germany" />
-					<option value="Ghana" />
-					<option value="Gibraltar" />
-					<option value="Greece" />
-					<option value="Greenland" />
-					<option value="Grenada" />
-					<option value="Guadeloupe" />
-					<option value="Guam" />
-					<option value="Guatemala" />
-					<option value="Guinea" />
-					<option value="Guinea-bissau" />
-					<option value="Guyana" />
-					<option value="Haiti" />
-					<option value="Heard Island and Mcdonald Islands" />
-					<option value="Holy See (Vatican City State)" />
-					<option value="Honduras" />
-					<option value="Hong Kong" />
-					<option value="Hungary" />
-					<option value="Iceland" />
-					<option value="India" />
-					<option value="Indonesia" />
-					<option value="Iran, Islamic Republic of" />
-					<option value="Iraq" />
-					<option value="Ireland" />
-					<option value="Israel" />
-					<option value="Italy" />
-					<option value="Jamaica" />
-					<option value="Japan" />
-					<option value="Jordan" />
-					<option value="Kazakhstan" />
-					<option value="Kenya" />
-					<option value="Kiribati" />
-					<option value="Korea, Democratic People's Republic of" />
-					<option value="Korea, Republic of" />
-					<option value="Kuwait" />
-					<option value="Kyrgyzstan" />
-					<option value="Lao People's Democratic Republic" />
-					<option value="Latvia" />
-					<option value="Lebanon" />
-					<option value="Lesotho" />
-					<option value="Liberia" />
-					<option value="Libyan Arab Jamahiriya" />
-					<option value="Liechtenstein" />
-					<option value="Lithuania" />
-					<option value="Luxembourg" />
-					<option value="Macao" />
-					<option value="Macedonia, The Former Yugoslav Republic of" />
-					<option value="Madagascar" />
-					<option value="Malawi" />
-					<option value="Malaysia" />
-					<option value="Maldives" />
-					<option value="Mali" />
-					<option value="Malta" />
-					<option value="Marshall Islands" />
-					<option value="Martinique" />
-					<option value="Mauritania" />
-					<option value="Mauritius" />
-					<option value="Mayotte" />
-					<option value="Mexico" />
-					<option value="Micronesia, Federated States of" />
-					<option value="Moldova, Republic of" />
-					<option value="Monaco" />
-					<option value="Mongolia" />
-					<option value="Montserrat" />
-					<option value="Morocco" />
-					<option value="Mozambique" />
-					<option value="Myanmar" />
-					<option value="Namibia" />
-					<option value="Nauru" />
-					<option value="Nepal" />
-					<option value="Netherlands" />
-					<option value="Netherlands Antilles" />
-					<option value="New Caledonia" />
-					<option value="New Zealand" />
-					<option value="Nicaragua" />
-					<option value="Niger" />
-					<option value="Nigeria" />
-					<option value="Niue" />
-					<option value="Norfolk Island" />
-					<option value="Northern Mariana Islands" />
-					<option value="Norway" />
-					<option value="Oman" />
-					<option value="Pakistan" />
-					<option value="Palau" />
-					<option value="Palestinian Territory, Occupied" />
-					<option value="Panama" />
-					<option value="Papua New Guinea" />
-					<option value="Paraguay" />
-					<option value="Peru" />
-					<option value="Philippines" />
-					<option value="Pitcairn" />
-					<option value="Poland" />
-					<option value="Portugal" />
-					<option value="Puerto Rico" />
-					<option value="Qatar" />
-					<option value="Reunion" />
-					<option value="Romania" />
-					<option value="Russian Federation" />
-					<option value="Rwanda" />
-					<option value="Saint Helena" />
-					<option value="Saint Kitts and Nevis" />
-					<option value="Saint Lucia" />
-					<option value="Saint Pierre and Miquelon" />
-					<option value="Saint Vincent and The Grenadines" />
-					<option value="Samoa" />
-					<option value="San Marino" />
-					<option value="Sao Tome and Principe" />
-					<option value="Saudi Arabia" />
-					<option value="Senegal" />
-					<option value="Serbia and Montenegro" />
-					<option value="Seychelles" />
-					<option value="Sierra Leone" />
-					<option value="Singapore" />
-					<option value="Slovakia" />
-					<option value="Slovenia" />
-					<option value="Solomon Islands" />
-					<option value="Somalia" />
-					<option value="South Africa" />
-					<option value="South Georgia and The South Sandwich Islands" />
-					<option value="Spain" />
-					<option value="Sri Lanka" />
-					<option value="Sudan" />
-					<option value="Suriname" />
-					<option value="Svalbard and Jan Mayen" />
-					<option value="Swaziland" />
-					<option value="Sweden" />
-					<option value="Switzerland" />
-					<option value="Syrian Arab Republic" />
-					<option value="Taiwan, Province of China" />
-					<option value="Tajikistan" />
-					<option value="Tanzania, United Republic of" />
-					<option value="Thailand" />
-					<option value="Timor-leste" />
-					<option value="Togo" />
-					<option value="Tokelau" />
-					<option value="Tonga" />
-					<option value="Trinidad and Tobago" />
-					<option value="Tunisia" />
-					<option value="Turkey" />
-					<option value="Turkmenistan" />
-					<option value="Turks and Caicos Islands" />
-					<option value="Tuvalu" />
-					<option value="Uganda" />
-					<option value="Ukraine" />
-					<option value="United Arab Emirates" />
-					<option value="United Kingdom" />
-					<option value="United States" />
-					<option value="United States Minor Outlying Islands" />
-					<option value="Uruguay" />
-					<option value="Uzbekistan" />
-					<option value="Vanuatu" />
-					<option value="Venezuela" />
-					<option value="Viet Nam" />
-					<option value="Virgin Islands, British" />
-					<option value="Virgin Islands, U.S" />
-					<option value="Wallis and Futuna" />
-					<option value="Western Sahara" />
-					<option value="Yemen" />
-					<option value="Zambia" />
-					<option value="Zimbabwe" />
-				</datalist>
-            </div>            
-            <button class="btn btn-info mb-0 form-control" id="submitSearch" >Search</button><br>
-              <img class="mt-2 hide" id="flag" src="" alt="">
-          </div>
-          <div id="summary" class="col-12">
-<!--
-            <h4 class="mb-0 pb-0">Summary</h4>
-            <small class="mt-0 pt-0">(Global Level)</small>
-            <p class="mb-1"><small>Below gives a summary of the total cases for all affected countries</small></p>
--->
-            <h5 class="mt-0 mb-0"><small><b>Last Updated:</b></small></h5>
-            <small class="text-primary mb-0" id="sUpdated">-</small><br><br>
-            <table class="table border table-striped table-hover mt-0">
-              <thead>
-                <th class="col text-dark nation">Global</th>
-                <th class="col text-center">##</th>
-              </thead>
-              <tbody class="text-muted">
-                <tr class="bg-warning">
-                  <td>Cases</td>
-                  <td id="sCases">-</td>
-                </tr>
-                <tr>
-                  <td>Deaths</td>
-                  <td id="sDeaths">-</td>
-                </tr>
-                <tr class="bg-success">
-                  <td>Recovered</td>
-                  <td id="sRecovered">-</td>
-                </tr>
-                <tr>
-                  <td>Active</td>
-                  <td id="sActive">-</td>
-                </tr>
-                <tr class="table-danger">
-                  <td >Affected Countries</td>
-                  <td id="affectedCountries">-</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          
-          
-           <div  class="col-12">
-            	<h5 class="hide "><small><b>Last Updated:</b></small></h5>
-             <small class="hide text-primary mt-0" id="updated">-</small><br>
-            <table class="table border table-striped table-hover text-dark-muted hide">
-              <thead>
-                <th id="nation" class="col text-dark nation">Type</th>
-                <th class="col text-center">##</th>
-              </thead>
-              <tbody class="text-muted">
-                <tr  class="bg-warning">
-                  <td >Total Cases</td>
-                  <td id="cases">--</td>
-                </tr>
-                <tr >
-                  <td >Active</td>
-                  <td id="active">--</td>
-                </tr>
-                <tr class="table-danger">
-                  <td>Critical</td>
-                  <td id="critical">--</td>
-                </tr>
-                 <tr>
-                  <td >Deaths</td>
-                  <td id="deaths">--</td>
-                </tr>
-                 <tr class="bg-success" >
-                  <td >Recovered</td>
-                  <td id="recovered">--</td>
-                </tr>
-                 <tr>
-                  <td >CasesToday</td>
-                  <td id="todayCases">--</td>
-                </tr>
-                 <tr class="bg-muted" >
-                  <td>DeathsToday</td>
-                  <td id="todayDeaths">--</td>
-                </tr>
-                 <tr >
-                  <td >Cases Per Million</td>
-                  <td id="casesPerOneMillion">--</td>
-                </tr>
-                 <tr >
-                  <td >Deaths Per Million</td>
-                  <td id="deathsPerOneMillion">--</td>
-                </tr>
-			</tbody>  
-          </table>
-          </div>
-          </center>
-        </div>
-      </div>
-    </div>
-    <hr>
-    <script src="js/variables.js" type="module"></script>
-   <div class="row" data-spy="scroll" data-target="#nav" data-offset="0">
-    <div class="container-md d-flex justify-content-center">
-      <div id="newsHead" class="col-md-auto pt-2 text-light ">
-       <center> 
-        <div class="container-fluid " >        
-          <h3 uk-scrollspy="cls: uk-animation-slide-left; repeat: true" class="mb-3 mt-5 text-center heading text-muted">TOP COVID19 NEWS</h3> 
-          <div class="card-group text-dark">
-			  <span id="news" >`				
-			  </span>
-          </div>
-        </div>
-      </center>
-     </div> 
-    </div>
-   </div>  
-    <script src="js/script.js" type="module"></script>
-    <script src="js/alertify.min.js"></script>
-    <script src="js/uikit.min.js"></script>
-    <script src="js/jquery-3.4.1.min.js"> </script>
-    <script src="js/bootstrap.min.js"></script>
-  </body>
-  <footer class="jumbotron mb-0 bg-light">
-     <center>
-        <div class="container-fluid">
-         <span><a target="_blank" href="https://twitter.com/yjbdanquah"><i class="fa fa-twitter-square" style="font-size:24px"></i></a></span>
-         <span><a target="_blank" href="https://web.facebook.com/johndanquahboateng"><i class="fa fa-facebook-square" style="font-size:24px"></i></a></span><br>
-          <span class="mb-0">Created by: jbdanquah</span><br>
-          <p class="mt-0">Email: yjbdanquah@gmail.com</p>
-          <hr>
-           <h3>Sources</h3>
+	<div class="text-center alert alert-info mt-5 mb-1" role="alert">
+		Stay home - <span class="bg-danger text-light pl-1 pr-1 pb-1">Stop the spread!</span>
+	</div>
+	<div id="page-container" class="container-fluid">
+		<div class="row">
+			<div class="col-md-4 pl-md-4 pt-md-4 text-center">
+				<p class="mb-3 ">Search cases with country name</p>
+				<div class="form-group mx-sm-3 mb-2">
+					<input list="countries" name="country" required id="country" class="form-control p-2" type="text"
+						placeholder="Enter country eg: China">
+					<datalist id="countries">
+						<option value="Afghanistan" />
+						<option value="Albania" />
+						<option value="Algeria" />
+						<option value="American Samoa" />
+						<option value="Andorra" />
+						<option value="Angola" />
+						<option value="Anguilla" />
+						<option value="Antarctica" />
+						<option value="Antigua and Barbuda" />
+						<option value="Argentina" />
+						<option value="Armenia" />
+						<option value="Aruba" />
+						<option value="Australia" />
+						<option value="Austria" />
+						<option value="Azerbaijan" />
+						<option value="Bahamas" />
+						<option value="Bahrain" />
+						<option value="Bangladesh" />
+						<option value="Barbados" />
+						<option value="Belarus" />
+						<option value="Belgium" />
+						<option value="Belize" />
+						<option value="Benin" />
+						<option value="Bermuda" />
+						<option value="Bhutan" />
+						<option value="Bolivia" />
+						<option value="Bosnia and Herzegovina" />
+						<option value="Botswana" />
+						<option value="Bouvet Island" />
+						<option value="Brazil" />
+						<option value="British Indian Ocean Territory" />
+						<option value="Brunei Darussalam" />
+						<option value="Bulgaria" />
+						<option value="Burkina Faso" />
+						<option value="Burundi" />
+						<option value="Cambodia" />
+						<option value="Cameroon" />
+						<option value="Canada" />
+						<option value="Cape Verde" />
+						<option value="Cayman Islands" />
+						<option value="Central African Republic" />
+						<option value="Chad" />
+						<option value="Chile" />
+						<option value="China" />
+						<option value="Christmas Island" />
+						<option value="Cocos (Keeling) Islands" />
+						<option value="Colombia" />
+						<option value="Comoros" />
+						<option value="Congo" />
+						<option value="Congo, The Democratic Republic of The" />
+						<option value="Cook Islands" />
+						<option value="Costa Rica" />
+						<option value="Cote D'ivoire" />
+						<option value="Croatia" />
+						<option value="Cuba" />
+						<option value="Cyprus" />
+						<option value="Czech Republic" />
+						<option value="Denmark" />
+						<option value="Djibouti" />
+						<option value="Dominica" />
+						<option value="Dominican Republic" />
+						<option value="Ecuador" />
+						<option value="Egypt" />
+						<option value="El Salvador" />
+						<option value="Equatorial Guinea" />
+						<option value="Eritrea" />
+						<option value="Estonia" />
+						<option value="Ethiopia" />
+						<option value="Falkland Islands (Malvinas)" />
+						<option value="Faroe Islands" />
+						<option value="Fiji" />
+						<option value="Finland" />
+						<option value="France" />
+						<option value="French Guiana" />
+						<option value="French Polynesia" />
+						<option value="French Southern Territories" />
+						<option value="Gabon" />
+						<option value="Gambia" />
+						<option value="Georgia" />
+						<option value="Germany" />
+						<option value="Ghana" />
+						<option value="Gibraltar" />
+						<option value="Greece" />
+						<option value="Greenland" />
+						<option value="Grenada" />
+						<option value="Guadeloupe" />
+						<option value="Guam" />
+						<option value="Guatemala" />
+						<option value="Guinea" />
+						<option value="Guinea-bissau" />
+						<option value="Guyana" />
+						<option value="Haiti" />
+						<option value="Heard Island and Mcdonald Islands" />
+						<option value="Holy See (Vatican City State)" />
+						<option value="Honduras" />
+						<option value="Hong Kong" />
+						<option value="Hungary" />
+						<option value="Iceland" />
+						<option value="India" />
+						<option value="Indonesia" />
+						<option value="Iran, Islamic Republic of" />
+						<option value="Iraq" />
+						<option value="Ireland" />
+						<option value="Israel" />
+						<option value="Italy" />
+						<option value="Jamaica" />
+						<option value="Japan" />
+						<option value="Jordan" />
+						<option value="Kazakhstan" />
+						<option value="Kenya" />
+						<option value="Kiribati" />
+						<option value="Korea, Democratic People's Republic of" />
+						<option value="Korea, Republic of" />
+						<option value="Kuwait" />
+						<option value="Kyrgyzstan" />
+						<option value="Lao People's Democratic Republic" />
+						<option value="Latvia" />
+						<option value="Lebanon" />
+						<option value="Lesotho" />
+						<option value="Liberia" />
+						<option value="Libyan Arab Jamahiriya" />
+						<option value="Liechtenstein" />
+						<option value="Lithuania" />
+						<option value="Luxembourg" />
+						<option value="Macao" />
+						<option value="Macedonia, The Former Yugoslav Republic of" />
+						<option value="Madagascar" />
+						<option value="Malawi" />
+						<option value="Malaysia" />
+						<option value="Maldives" />
+						<option value="Mali" />
+						<option value="Malta" />
+						<option value="Marshall Islands" />
+						<option value="Martinique" />
+						<option value="Mauritania" />
+						<option value="Mauritius" />
+						<option value="Mayotte" />
+						<option value="Mexico" />
+						<option value="Micronesia, Federated States of" />
+						<option value="Moldova, Republic of" />
+						<option value="Monaco" />
+						<option value="Mongolia" />
+						<option value="Montserrat" />
+						<option value="Morocco" />
+						<option value="Mozambique" />
+						<option value="Myanmar" />
+						<option value="Namibia" />
+						<option value="Nauru" />
+						<option value="Nepal" />
+						<option value="Netherlands" />
+						<option value="Netherlands Antilles" />
+						<option value="New Caledonia" />
+						<option value="New Zealand" />
+						<option value="Nicaragua" />
+						<option value="Niger" />
+						<option value="Nigeria" />
+						<option value="Niue" />
+						<option value="Norfolk Island" />
+						<option value="Northern Mariana Islands" />
+						<option value="Norway" />
+						<option value="Oman" />
+						<option value="Pakistan" />
+						<option value="Palau" />
+						<option value="Palestinian Territory, Occupied" />
+						<option value="Panama" />
+						<option value="Papua New Guinea" />
+						<option value="Paraguay" />
+						<option value="Peru" />
+						<option value="Philippines" />
+						<option value="Pitcairn" />
+						<option value="Poland" />
+						<option value="Portugal" />
+						<option value="Puerto Rico" />
+						<option value="Qatar" />
+						<option value="Reunion" />
+						<option value="Romania" />
+						<option value="Russian Federation" />
+						<option value="Rwanda" />
+						<option value="Saint Helena" />
+						<option value="Saint Kitts and Nevis" />
+						<option value="Saint Lucia" />
+						<option value="Saint Pierre and Miquelon" />
+						<option value="Saint Vincent and The Grenadines" />
+						<option value="Samoa" />
+						<option value="San Marino" />
+						<option value="Sao Tome and Principe" />
+						<option value="Saudi Arabia" />
+						<option value="Senegal" />
+						<option value="Serbia and Montenegro" />
+						<option value="Seychelles" />
+						<option value="Sierra Leone" />
+						<option value="Singapore" />
+						<option value="Slovakia" />
+						<option value="Slovenia" />
+						<option value="Solomon Islands" />
+						<option value="Somalia" />
+						<option value="South Africa" />
+						<option value="South Georgia and The South Sandwich Islands" />
+						<option value="Spain" />
+						<option value="Sri Lanka" />
+						<option value="Sudan" />
+						<option value="Suriname" />
+						<option value="Svalbard and Jan Mayen" />
+						<option value="Swaziland" />
+						<option value="Sweden" />
+						<option value="Switzerland" />
+						<option value="Syrian Arab Republic" />
+						<option value="Taiwan, Province of China" />
+						<option value="Tajikistan" />
+						<option value="Tanzania, United Republic of" />
+						<option value="Thailand" />
+						<option value="Timor-leste" />
+						<option value="Togo" />
+						<option value="Tokelau" />
+						<option value="Tonga" />
+						<option value="Trinidad and Tobago" />
+						<option value="Tunisia" />
+						<option value="Turkey" />
+						<option value="Turkmenistan" />
+						<option value="Turks and Caicos Islands" />
+						<option value="Tuvalu" />
+						<option value="Uganda" />
+						<option value="Ukraine" />
+						<option value="United Arab Emirates" />
+						<option value="United Kingdom" />
+						<option value="United States" />
+						<option value="United States Minor Outlying Islands" />
+						<option value="Uruguay" />
+						<option value="Uzbekistan" />
+						<option value="Vanuatu" />
+						<option value="Venezuela" />
+						<option value="Viet Nam" />
+						<option value="Virgin Islands, British" />
+						<option value="Virgin Islands, U.S" />
+						<option value="Wallis and Futuna" />
+						<option value="Western Sahara" />
+						<option value="Yemen" />
+						<option value="Zambia" />
+						<option value="Zimbabwe" />
+					</datalist>
+				</div>
+				<button class="btn btn-info mb-0 form-control" id="submitSearch">Search</button><br>
+				<img class="img-fluid img-thumbnail mx-auto  mt-2 hide " id="flag" src="" alt="">
+			</div>
+			<div class="col-md-1"></div>
+			<div id="summary" class="col-md-6">
+				<h5 class="mt-4 mb-0"><small><b>Last Updated:</b></small></h5>
+				<small class="text-primary mb-0" id="sUpdated">-</small><br><br>
+				<table class="table border table-striped table-hover mt-0">
+					<thead>
+						<th class="col text-dark nation">Global</th>
+						<th class="col text-center">##</th>
+					</thead>
+					<tbody class="text-muted">
+						<tr class="bg-warning">
+							<td>Cases</td>
+							<td id="sCases">-</td>
+						</tr>
+						<tr>
+							<td>Deaths</td>
+							<td id="sDeaths">-</td>
+						</tr>
+						<tr class="bg-success">
+							<td>Recovered</td>
+							<td id="sRecovered">-</td>
+						</tr>
+						<tr>
+							<td>Active</td>
+							<td id="sActive">-</td>
+						</tr>
+						<tr class="table-danger">
+							<td>Affected Countries</td>
+							<td id="affectedCountries">-</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="col-md-6">
+				<h5 class="hide mt-4 "><small><b>Last Updated:</b></small></h5>
+				<small class="hide text-primary mt-0" id="updated">-</small><br>
+				<table class="table border table-striped table-hover text-dark-muted hide">
+					<thead>
+						<th id="nation" class="col text-dark nation">Type</th>
+						<th class="col text-center">##</th>
+					</thead>
+					<tbody class="text-muted">
+						<tr class="bg-warning">
+							<td>Total Cases</td>
+							<td id="cases">--</td>
+						</tr>
+						<tr>
+							<td>Active</td>
+							<td id="active">--</td>
+						</tr>
+						<tr class="table-danger">
+							<td>Critical</td>
+							<td id="critical">--</td>
+						</tr>
+						<tr>
+							<td>Deaths</td>
+							<td id="deaths">--</td>
+						</tr>
+						<tr class="bg-success">
+							<td>Recovered</td>
+							<td id="recovered">--</td>
+						</tr>
+						<tr>
+							<td>CasesToday</td>
+							<td id="todayCases">--</td>
+						</tr>
+						<tr class="bg-muted">
+							<td>DeathsToday</td>
+							<td id="todayDeaths">--</td>
+						</tr>
+						<tr>
+							<td>Cases Per Million</td>
+							<td id="casesPerOneMillion">--</td>
+						</tr>
+						<tr>
+							<td>Deaths Per Million</td>
+							<td id="deathsPerOneMillion">--</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+
+	<hr>
+
+	<div class="row" data-spy="scroll" data-target="#nav" data-offset="0">
+		<div class="container-md d-flex justify-content-center">
+			<div id="newsHead" class="col-md-auto pt-2 text-light ">
+				<center>
+					<div class="container-fluid ">
+						<h3 uk-scrollspy="cls: uk-animation-slide-left; repeat: true"
+							class="mb-3 mt-5 text-center heading text-muted">TOP COVID19 NEWS</h3>
+						<div class="card-group text-dark">
+							<span id="news">`
+							</span>
+						</div>
+					</div>
+				</center>
+			</div>
+		</div>
+	</div>
+	<script src="js/variables.js" type="text/javascript"></script>
+	<script src="js/script.js" type="module"></script>
+	<script src="js/alertify.min.js"></script>
+	<script src="js/uikit.min.js"></script>
+	<script src="js/jquery-3.4.1.min.js"> </script>
+	<script src="js/bootstrap.min.js"></script>
+</body>
+<footer class="jumbotron mb-0 bg-light">
+	<center>
+		<div class="container-fluid">
+			<span><a target="_blank" href="https://twitter.com/yjbdanquah"><i class="fa fa-twitter-square"
+						style="font-size:24px"></i></a></span>
+			<span><a target="_blank" href="https://web.facebook.com/johndanquahboateng"><i class="fa fa-facebook-square"
+						style="font-size:24px"></i></a></span><br>
+			<span class="mb-0">Created by: jbdanquah</span><br>
+			<p class="mt-0">Email: yjbdanquah@gmail.com</p>
+			<hr>
+			<h3>Sources</h3>
 			<p>Local government websites/health departments</p>
 			<a class="m-2" href="https://newsapi.org">NewsAPI</a>|
 			<a class="m-2" href="https://www.cdc.gov/">CDC</a>|
 			<a class="m-2" href="https://www.cdc.gov/">NovelCOVID API</a>|
 			<a class="m-2" href="https://www.who.int/">WHO</a>
 
-        </div>
-     </center>
-  
-  </footer>
+		</div>
+	</center>
+
+</footer>
+
 </html>

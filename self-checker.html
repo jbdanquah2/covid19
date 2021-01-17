@@ -1,592 +1,653 @@
 <!doctype html>
 <html lang="en">
-  <head>
-     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162779162-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
 
-      gtag('config', 'UA-162779162-1');
-    </script>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162779162-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-162779162-1');
+	</script>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-  	
-	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	  <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-	  <meta name="description" content="Live coronavirus dashboard tracker. See data, maps, social media trends, and learn about prevention measures." />
-	  <meta name="keywords" content="coronavirus, covid-19, tracker, dashboard, preperation, prevention, trends, statistics, data" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-	  <meta property="og:type" content="website">
-	  <meta property="og:url" content="https://jbdanquah2.github.io/covid19">
-	  <meta property="og:title" content="COVID19 | Updates | News!">
-	  <meta property="og:description" content="Live coronavirus cases and news tracker. See data, maps, social media trends, and learn about prevention measures.">
+	<meta name="description"
+		content="Live coronavirus dashboard tracker. See data, maps, social media trends, and learn about prevention measures." />
+	<meta name="keywords"
+		content="coronavirus, covid-19, tracker, dashboard, preperation, prevention, trends, statistics, data" />
 
-	  <meta name="twitter:title" content="COVID19 - Coronavirus Tracker">
-	  <meta name="twitter:description" content="Live coronavirus dashboard. See data, maps, social media trends, and learn about prevention measures.">
-	  
-	  <meta name="twitter:creator" content="@yjbdanquah">
-	  <meta name="twitter:card" content="summary_large_image"/>
-  	
-  	
-   	<link rel="icon" href="img/favicon.ico" sizes="16x16" type="image/png">
-    <!--  CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/uikit.min.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/alertify.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    
-    <title>COVID19 | Updates | News!</title>
-  </head>
-  <body> 
-  	<nav class="navbar navbar-expand-lg navbar-light table-light text-dark fixed-top mb-2">
-	  <a class="navbar-brand" href="index.html"><img  src="img/2019-coronavirus.png" width="20" height="30" alt="">
-        Covid19 </a>
-	  <button class="navbar-toggler border border-dark" type="button" data-toggle="collapse" data-target="#ncovid19" aria-controls="ncovid19" aria-expanded="false" aria-label="Toggle navigation">
-		<span id="menu" class="navbar-toggler-icon"></span>
-	  </button> 
-		
-	  <div class="collapse navbar-collapse" id="ncovid19">
-		<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-		  <li class="nav-item active">
-			<a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-		  </li>
-		   <li class="nav-item active">
-			<a onclick="notice()" id="usa" class="nav-link" href="#">US Cases <span class="sr-only">(current)</span></a>
-		  </li>
-		  <li class="nav-item active">
-			<a id="newsLink" class="nav-link text-danger" href="news.html"><blink><span class="">COVID19</span> <span class="">News</span></blink></a>
-		  </li>
-		   <li  class="nav-item active">
-			<a id="info" class="nav-link " href="self-checker.html">Self Checker</a>
-		  </li>
-		  <li  class="nav-item active">
-			<a id="info" class="nav-link " href="about.html">About</a>
-		  </li>
-		</ul>
-	  </div>
-<!--	  <span class="mr-md-5 mr-sm-1" ><a class="text-danger" target="_blank" href="https://ko-fi.com/covidd19">Buy me coffee<i id="buyCoffee" class="fa fa-coffee" style="font-size:20px"></i></a></span>-->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://jbdanquah2.github.io/covid19">
+	<meta property="og:title" content="COVID19 | Updates | News!">
+	<meta property="og:description"
+		content="Live coronavirus cases and news tracker. See data, maps, social media trends, and learn about prevention measures.">
+
+	<meta name="twitter:title" content="COVID19 - Coronavirus Tracker">
+	<meta name="twitter:description"
+		content="Live coronavirus dashboard. See data, maps, social media trends, and learn about prevention measures.">
+
+	<meta name="twitter:creator" content="@yjbdanquah">
+	<meta name="twitter:card" content="summary_large_image" />
+
+
+	<link rel="icon" href="img/favicon.ico" sizes="16x16" type="image/png">
+	<!--  CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/uikit.min.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/alertify.min.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	<title>COVID19 | Updates | News!</title>
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light table-light text-dark fixed-top mb-2">
+		<a class="navbar-brand" href="index.html"><img src="img/2019-coronavirus.png" width="20" height="30" alt="">
+			Covid19 </a>
+		<button class="navbar-toggler border border-dark" type="button" data-toggle="collapse" data-target="#ncovid19"
+			aria-controls="ncovid19" aria-expanded="false" aria-label="Toggle navigation">
+			<span id="menu" class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="ncovid19">
+			<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+				<li class="nav-item active">
+					<a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item active">
+					<a id="newsLink" class="nav-link text-danger" href="news.html">
+						<blink><span class="">COVID19</span> <span class="">News</span></blink>
+					</a>
+				</li>
+				<li class="nav-item active">
+					<a id="info" class="nav-link " href="self-checker.html">Self Checker</a>
+				</li>
+				<li class="nav-item active">
+					<a id="info" class="nav-link " href="about.html">About</a>
+				</li>
+			</ul>
+		</div>
+		<!--	  <span class="mr-md-5 mr-sm-1" ><a class="text-danger" target="_blank" href="https://ko-fi.com/covidd19">Buy me coffee<i id="buyCoffee" class="fa fa-coffee" style="font-size:20px"></i></a></span>-->
 	</nav>
-    <div class="text-center alert alert-info mt-5 mb-1" role="alert">
-       Stay home - <span class="bg-danger text-light pl-1 pr-1 pb-1" >Stop the spread!</span>
-     </div>
-      <div id="selfCheck" class="col-md-auto pt-2 text-light ">
-       <center> 
-        <div class="container-fluid " >        
-          <h3 id="bot" uk-scrollspy="cls: uk-animation-slide-left; repeat: true" class="mb-3 mt-2 text-center heading text-muted">Hi, my name is nBot</h3> 
-          <div class="card-group text-dark d-flex justify-content-center">
+	<div class="text-center alert alert-info mt-5 mb-1" role="alert">
+		Stay home - <span class="bg-danger text-light pl-1 pr-1 pb-1">Stop the spread!</span>
+	</div>
+	<div id="selfCheck" class="col-md-auto pt-2 text-light ">
+		<center>
+			<div class="container-fluid ">
+				<h3 id="bot" uk-scrollspy="cls: uk-animation-slide-left; repeat: true"
+					class="mb-3 mt-2 text-center heading text-muted">Hi, my name is nBot</h3>
+				<div class="card-group text-dark d-flex justify-content-center">
 
-                  <div class="card">
-			          <div id="msg" class="card-body">
-			          	I will help you check yourself if your have covid-19 or not!
-			          </div>
-			           <div class="row d-flex justify-content-center">
-           	      		
-           	      		<div class="col-md-5 col-sm-12 uk-card uk-card-default uk-card-body uk-animation-scale-up border p-5 aboutAbout">
-			          	<p>Are you Ready?</p>
-			          	<div class="gender text-left text-light bg-info pl-3">
-			          	  <div class="form-group">
-			          	  	<label for="email" class="form-check-label">What's your emaill address</label>
-			          		<input class="form-control p-4" id="email" name="email" type="email" placeholder="Enter email address">
-			          		
-			          	  </div>
-			          	<div class="form-group">
-		          	  		<label for="female" class="form-check-control">What's your phone number?</label>
-			          	  	<input class="form-control p-4" id="phone" name="phone" type="text" placeholder="Enter phone number">
-			          	  	
-			          	</div>
-			          	</div><br>
-			          	<button onclick="move(this)" id="about" type="submit" value="next" class="btn btn-info pl-5 pr-5 About">Next</button>
-			           </div>
-           	      		
-           	      		
-	           	      <!-- about you -->
-		           	   <div id="aboutAbout" class="col-md-5 col-sm-12 uk-card uk-card-default uk-card-body uk-animation-scale-up border p-5 hide healthHealth">
-		           	   	  <h3>About You</h3><br>
-			         
-			          	<label class="form-control mb-0" for="age">How old are you?</label>
-			          	<select class="form-control bg-info text-light " name="age" id="age">
-			          	    <option disabled selected value="">Select Age</option>
-			          		<option value="0-9">0-9 years</option>
-			          		<option value="10-19">10-19 years</option>
-			          		<option value="20-29">20-29 years</option>
-			          		<option value="30-39">30-39 years</option>
-			          		<option value="40-49">40-49 years</option>
-			          		<option value="50-59">50-59 years</option>
-			          		<option value="60-69">60-69 years</option>
-			          		<option value="70-79">70-79 years</option>
-			          		<option value="80+">80+ years</option>
-			          	</select><br>
-			          	<p>Please tell us your gender</p>
-			          	<div class="gender text-left text-light bg-info pl-3">
-			          		<div class="form-check">
-			          		<input checked value="male" class="form-check-input" id="male" name="gender" type="radio">
-			          		<label for="male" class="form-check-label">Male</label>
-			          	</div>
-			          	<div class="form-check">
-			          	  	<input value="female" class="form-check-input" id="female" name="gender" type="radio">
-			          	  	<label for="female" class="form-check-label">Female</label>
-			          	</div>
-			          	</div><br>
-			          	
-			          	<label class="form-control mb-0" for="region">Please tell us your region</label>
-<!--			          	<select class="form-control " >-->
-			          	   <input list="countries" name="country"   required id="region" class="form-control bg-info text-light p-2" type="text" placeholder="Enter country eg: China">
-							 <datalist id="countries">
-								<option value="Afghanistan" />
-								<option value="Albania" />
-								<option value="Algeria" />
-								<option value="American Samoa" />
-								<option value="Andorra" />
-								<option value="Angola" />
-								<option value="Anguilla" />
-								<option value="Antarctica" />
-								<option value="Antigua and Barbuda" />
-								<option value="Argentina" />
-								<option value="Armenia" />
-								<option value="Aruba" />
-								<option value="Australia" />
-								<option value="Austria" />
-								<option value="Azerbaijan" />
-								<option value="Bahamas" />
-								<option value="Bahrain" />
-								<option value="Bangladesh" />
-								<option value="Barbados" />
-								<option value="Belarus" />
-								<option value="Belgium" />
-								<option value="Belize" />
-								<option value="Benin" />
-								<option value="Bermuda" />
-								<option value="Bhutan" />
-								<option value="Bolivia" />
-								<option value="Bosnia and Herzegovina" />
-								<option value="Botswana" />
-								<option value="Bouvet Island" />
-								<option value="Brazil" />
-								<option value="British Indian Ocean Territory" />
-								<option value="Brunei Darussalam" />
-								<option value="Bulgaria" />
-								<option value="Burkina Faso" />
-								<option value="Burundi" />
-								<option value="Cambodia" />
-								<option value="Cameroon" />
-								<option value="Canada" />
-								<option value="Cape Verde" />
-								<option value="Cayman Islands" />
-								<option value="Central African Republic" />
-								<option value="Chad" />
-								<option value="Chile" />
-								<option value="China" />
-								<option value="Christmas Island" />
-								<option value="Cocos (Keeling) Islands" />
-								<option value="Colombia" />
-								<option value="Comoros" />
-								<option value="Congo" />
-								<option value="Congo, The Democratic Republic of The" />
-								<option value="Cook Islands" />
-								<option value="Costa Rica" />
-								<option value="Cote D'ivoire" />
-								<option value="Croatia" />
-								<option value="Cuba" />
-								<option value="Cyprus" />
-								<option value="Czech Republic" />
-								<option value="Denmark" />
-								<option value="Djibouti" />
-								<option value="Dominica" />
-								<option value="Dominican Republic" />
-								<option value="Ecuador" />
-								<option value="Egypt" />
-								<option value="El Salvador" />
-								<option value="Equatorial Guinea" />
-								<option value="Eritrea" />
-								<option value="Estonia" />
-								<option value="Ethiopia" />
-								<option value="Falkland Islands (Malvinas)" />
-								<option value="Faroe Islands" />
-								<option value="Fiji" />
-								<option value="Finland" />
-								<option value="France" />
-								<option value="French Guiana" />
-								<option value="French Polynesia" />
-								<option value="French Southern Territories" />
-								<option value="Gabon" />
-								<option value="Gambia" />
-								<option value="Georgia" />
-								<option value="Germany" />
-								<option value="Ghana" />
-								<option value="Gibraltar" />
-								<option value="Greece" />
-								<option value="Greenland" />
-								<option value="Grenada" />
-								<option value="Guadeloupe" />
-								<option value="Guam" />
-								<option value="Guatemala" />
-								<option value="Guinea" />
-								<option value="Guinea-bissau" />
-								<option value="Guyana" />
-								<option value="Haiti" />
-								<option value="Heard Island and Mcdonald Islands" />
-								<option value="Holy See (Vatican City State)" />
-								<option value="Honduras" />
-								<option value="Hong Kong" />
-								<option value="Hungary" />
-								<option value="Iceland" />
-								<option value="India" />
-								<option value="Indonesia" />
-								<option value="Iran, Islamic Republic of" />
-								<option value="Iraq" />
-								<option value="Ireland" />
-								<option value="Israel" />
-								<option value="Italy" />
-								<option value="Jamaica" />
-								<option value="Japan" />
-								<option value="Jordan" />
-								<option value="Kazakhstan" />
-								<option value="Kenya" />
-								<option value="Kiribati" />
-								<option value="Korea, Democratic People's Republic of" />
-								<option value="Korea, Republic of" />
-								<option value="Kuwait" />
-								<option value="Kyrgyzstan" />
-								<option value="Lao People's Democratic Republic" />
-								<option value="Latvia" />
-								<option value="Lebanon" />
-								<option value="Lesotho" />
-								<option value="Liberia" />
-								<option value="Libyan Arab Jamahiriya" />
-								<option value="Liechtenstein" />
-								<option value="Lithuania" />
-								<option value="Luxembourg" />
-								<option value="Macao" />
-								<option value="Macedonia, The Former Yugoslav Republic of" />
-								<option value="Madagascar" />
-								<option value="Malawi" />
-								<option value="Malaysia" />
-								<option value="Maldives" />
-								<option value="Mali" />
-								<option value="Malta" />
-								<option value="Marshall Islands" />
-								<option value="Martinique" />
-								<option value="Mauritania" />
-								<option value="Mauritius" />
-								<option value="Mayotte" />
-								<option value="Mexico" />
-								<option value="Micronesia, Federated States of" />
-								<option value="Moldova, Republic of" />
-								<option value="Monaco" />
-								<option value="Mongolia" />
-								<option value="Montserrat" />
-								<option value="Morocco" />
-								<option value="Mozambique" />
-								<option value="Myanmar" />
-								<option value="Namibia" />
-								<option value="Nauru" />
-								<option value="Nepal" />
-								<option value="Netherlands" />
-								<option value="Netherlands Antilles" />
-								<option value="New Caledonia" />
-								<option value="New Zealand" />
-								<option value="Nicaragua" />
-								<option value="Niger" />
-								<option value="Nigeria" />
-								<option value="Niue" />
-								<option value="Norfolk Island" />
-								<option value="Northern Mariana Islands" />
-								<option value="Norway" />
-								<option value="Oman" />
-								<option value="Pakistan" />
-								<option value="Palau" />
-								<option value="Palestinian Territory, Occupied" />
-								<option value="Panama" />
-								<option value="Papua New Guinea" />
-								<option value="Paraguay" />
-								<option value="Peru" />
-								<option value="Philippines" />
-								<option value="Pitcairn" />
-								<option value="Poland" />
-								<option value="Portugal" />
-								<option value="Puerto Rico" />
-								<option value="Qatar" />
-								<option value="Reunion" />
-								<option value="Romania" />
-								<option value="Russian Federation" />
-								<option value="Rwanda" />
-								<option value="Saint Helena" />
-								<option value="Saint Kitts and Nevis" />
-								<option value="Saint Lucia" />
-								<option value="Saint Pierre and Miquelon" />
-								<option value="Saint Vincent and The Grenadines" />
-								<option value="Samoa" />
-								<option value="San Marino" />
-								<option value="Sao Tome and Principe" />
-								<option value="Saudi Arabia" />
-								<option value="Senegal" />
-								<option value="Serbia and Montenegro" />
-								<option value="Seychelles" />
-								<option value="Sierra Leone" />
-								<option value="Singapore" />
-								<option value="Slovakia" />
-								<option value="Slovenia" />
-								<option value="Solomon Islands" />
-								<option value="Somalia" />
-								<option value="South Africa" />
-								<option value="South Georgia and The South Sandwich Islands" />
-								<option value="Spain" />
-								<option value="Sri Lanka" />
-								<option value="Sudan" />
-								<option value="Suriname" />
-								<option value="Svalbard and Jan Mayen" />
-								<option value="Swaziland" />
-								<option value="Sweden" />
-								<option value="Switzerland" />
-								<option value="Syrian Arab Republic" />
-								<option value="Taiwan, Province of China" />
-								<option value="Tajikistan" />
-								<option value="Tanzania, United Republic of" />
-								<option value="Thailand" />
-								<option value="Timor-leste" />
-								<option value="Togo" />
-								<option value="Tokelau" />
-								<option value="Tonga" />
-								<option value="Trinidad and Tobago" />
-								<option value="Tunisia" />
-								<option value="Turkey" />
-								<option value="Turkmenistan" />
-								<option value="Turks and Caicos Islands" />
-								<option value="Tuvalu" />
-								<option value="Uganda" />
-								<option value="Ukraine" />
-								<option value="United Arab Emirates" />
-								<option value="United Kingdom" />
-								<option value="United States" />
-								<option value="United States Minor Outlying Islands" />
-								<option value="Uruguay" />
-								<option value="Uzbekistan" />
-								<option value="Vanuatu" />
-								<option value="Venezuela" />
-								<option value="Viet Nam" />
-								<option value="Virgin Islands, British" />
-								<option value="Virgin Islands, U.S" />
-								<option value="Wallis and Futuna" />
-								<option value="Western Sahara" />
-								<option value="Yemen" />
-								<option value="Zambia" />
-								<option value="Zimbabwe" />
-							</datalist>
-        	
-<!--			          	</select>-->
-			          	<br>
-			          	<p>Have you recently travelled abroad?</p>
-			          	<div class="travel text-left text-light bg-info pl-3">
-			          		<div class="form-check">
-			          		<input checked name="travel" value="yes" class="form-check-input" id="travelYes"  type="radio">
-			          		<label for="travelYes" class="form-check-label">Yes</label>
-			          	   </div>
-			          	   <div class="form-check">
-			          	  	<input name="travel" value="no" class="form-check-input" id="travelNo" type="radio">
-			          	  	<label for="travelNo" class="form-check-label">No</label>
-			          	</div>
-			          	</div><br>
-			          	<button onclick="move(this)" id="health" type="submit" value="next" class="btn btn-info pl-5 pr-5 Health">Next</button>
-			          	
-			           </div>
-			           
-						<!-- about your heath -->	           	   
-	           	   		<div id="healthHealth" class="col-md-5 col-sm-12 uk-card uk-card-default uk-card-body uk-animation-scale-up border p-5 hide socialSocial">
-		           	   	  <h3>About Your Health</h3><br>
-			          	
-			          	<p>Do you smoke?</p>
-			          	<div class="smoke text-left text-light bg-info pl-3">
-			          		<div class="form-check">
-			          		<input checked name="smoke" value="yes" class="form-check-input" id="smokeYes" type="radio">
-			          		<label for="smokeYes" class="form-check-label">Yes</label>
-			          	</div>
-			          	<div class="form-check">
-			          	  	<input name="smoke" value="no" class="form-check-input" id="smokeNo" type="radio">
-			          	  	<label for="smokeNo" class="form-check-label">No</label>
-			          	</div>
-			          	</div><br>
-			          	
-			          	<p>Do you have any of the following diseases?</p>
-			          		<ol class="text-left">
-			          			<li>Lung disease</li>
-			          			<li>Asthma</li>
-			          			<li>Heart disease</li>
-			          			<li>Diabetes</li>
-			          			<li>Kidney diseases</li>
-			          			<li>Cancer</li>
-			          		</ol>
-			          	
-			          	<div class="disease text-left text-light bg-info pl-3">
-			          		<div class="form-check">
-			          		<input checked name="disease" value="yes" class="form-check-input" id="deseaseYes" type="radio">
-			          		<label for="deseaseYes" class="form-check-label">Yes</label>
-			          	</div>
-			          	<div class="form-check">
-			          	  	<input name="disease" value="no" class="form-check-input" id="deseaseNo" type="radio">
-			          	  	<label for="deseaseNo" class="form-check-label">No</label>
-			          	</div>
-			          	</div><br>
-			          	<button onclick="move(this)" id="social" type="submit" value="next" class="btn btn-info pl-5 pr-5 Social">Next</button>
-			           </div>
-	           	   
-	           	        <!-- social distancing -->	           	   
-	           	   		<div id="socialSocial" class="col-md-5 col-sm-12 uk-card uk-card-default uk-card-body uk-animation-scale-up border p-5 hide symptomsSymptoms">
-		           	   	  <h3>Social Distancing</h3><br>
-			          	<p>Have you had close contact with someone suspected of having or had COVID-19 infection, such as family
-			          	members, colleagues or others?</p>
-			          	<div class="social text-left text-light bg-info pl-3">
-			          		<div class="form-check">
-			          		<input name="social" checked value="yes" class="form-check-input" id="socialYes"  type="radio">
-			          		<label for="socialYes" class="form-check-label">Yes</label>
-			          	</div>
-			          	<div class="form-check">
-			          	  	<input name="social" value="no" class="form-check-input" id="socialNo"  type="radio">
-			          	  	<label for="socialNo" class="form-check-label">No</label>
-			          	</div>
-			          	</div><br>
-			          	<button onclick="move(this)" id="symptoms" type="submit" value="next" class="btn btn-info pl-5 pr-5 Symptoms">Next</button>
-			           </div>
-	           	   
-	           	        <!-- check symptoms -->	           	   
-	           	   		<div id="symptomsSymptoms" class="col-md-5 col-sm-12 uk-card uk-card-default uk-card-body uk-animation-scale-up border p-5 hide assessAssess1">
-		           	   	  <h3>Let's check your symptoms</h3><br>
-			          	<p>Do you have a fever?</p>
-			          	<div class="symptom text-left text-light bg-info pl-3">
-			          		<div class="form-check">
-			          		  <input name="fever" checked value="yes" class="form-check-input" id="feverYes"  type="radio">
-			          		  <label for="feverYes" class="form-check-label">Yes</label>
-			          	    </div>
-			          	    <div class="form-check">
-							  <input name="fever" value="no" class="form-check-input" id="feverNo"  type="radio">
-							  <label for="feverNo" class="form-check-label">No</label>
-			          	    </div>
-			          	</div><br>
-			          	
-			          	<p>Do you have cough - new or continuous?</p>
-			          	<div class="cough text-left text-light bg-info pl-3">
-			          		<div class="form-check">
-			          		  <input checked name="cough" value="yes" class="form-check-input" id="coughYes"  type="radio">
-			          		  <label for="coughYes" class="form-check-label">Yes</label>
-			          	    </div>
-			          	    <div class="form-check">
-			          	  	  <input name="cough" value="no" class="form-check-input" id="coughNo" type="radio">
-			          	  	  <label for="coughNo" class="form-check-label">No</label>
-			          	    </div>
-			          	</div><br>
-			          	
-			          	<p>Do you have shortness of breath?</p>
-			          	<div class="breath text-left text-light bg-info pl-3">
-			          		<div class="form-check">
-			          		<input checked name="breath" value="yes" class="form-check-input" id="breathYes" type="radio">
-			          		<label for="breathYes" class="form-check-label">Yes</label>
-			          	</div>
-			          	<div class="form-check">
-			          	  	<input name="breath" value="no" class="form-check-input" id="breathNo" type="radio">
-			          	  	<label for="breathNo" class="form-check-label">No</label>
-			          	</div>
-			          	</div><br>
-			          	<p>Do you have loss of taste or smell?</p>
-			          	<div class="smell text-left text-light bg-info pl-3">
-			          		<div class="form-check">
-			          		<input checked name="smell" value="yes" class="form-check-input" id="smellYes" type="radio">
-			          		<label for="smellYes" class="form-check-label">Yes</label>
-			          	</div>
-			          	<div class="form-check">
-			          	  	<input name="smell" value="no" class="form-check-input" id="smellNo" type="radio">
-			          	  	<label for="smellNo" class="form-check-label">No</label>
-			          	</div>
-			          	</div><br>
-			          	<label class="form-control mb-0" for="age">How long have you had the symptoms?</label>
-			          	<select name="howLong" class="form-control bg-info text-light " id="howLong">
-			          	    <option disabled selected value="">Select how long</option>
-			          		<option value="1">1 day</option>
-			          		<option value="2">2 days</option>
-			          		<option value="3">3 days</option>
-			          		<option value="4">4 days</option>
-			          		<option value="5">5 days</option>
-			          		<option value="6">6 days</option>
-			          		<option value="7">7 days</option>
-			          		<option value="8">8 days</option>
-			          		<option value="9">9 days</option>
-			          		<option value="10">10 days</option>
-			          		<option value="11">11 days</option>
-			          		<option value="12">12 days</option>
-			          		<option value="13">13 days</option>
-			          		<option value="14">14 days</option>
-			          	</select><br>
-			          	<button onclick="move(this)" id="assess" type="submit"  value="submit" class="btn btn-info pl-5 pr-5 Assess1 ">Submit</button>
-			          	<input id="diagnos" hidden value="0" type="text">
-			           </div>
-	           	       
-	           	       <!-- Risk Assessment 1 -->	           	   
-	           	   		<div id="assessAssess1" class="col-md-5 col-sm-12 uk-card uk-card-default uk-card-body uk-animation-scale-up border p-5 hide risk1Ass">
-		           	   	  <h3>Risk Assessment</h3><br>
-			          	 <h5 class="text-justify mb-4">Based on the symptoms reported, your current risk of having Covid-19 (Coronavirus) is High</h5>
-							<p class="text-justify">Remain calm, quarantine/separate yourself from household , friends and associates and contact Ghana Health Service helpline 112 for further advice.</p>
-			          	<button onclick="move(this)" id="risk1" value="next" class="btn btn-info pl-5 pr-5 assess1">Next</button>
-			           </div>
-	           	   
-	           	   <!-- Risk Assessment 2 -->	           	   
-	           	   		<div id="assessAssess2" class="col-md-5 uk-card uk-card-default uk-card-body uk-animation-scale-up col-sm-12 border p-5 hide">
-		           	   	  <h3>Risk Assessment</h3><br>
-			          	 <h5 class="mb-4">Based on the symptoms reported, your current risk of having Covid-19 (Coronavirus) is <b>Medium</b></h5>
-			          	 <ul>
-			          	 	<li>Please follow the general guidelines for prevention as advised by Ghana Health Service.</li>
-			          	 	<li>Stay home, avoid crowds and contact with others.</li>
-			          	 	<li>Wash your hands with soap and water before touching anything including your eyes, nose and mouth.</li>
-			          	 	<li>Cover your mouth and nose when you cough or sneeze.</li>
-			          	 	<li>Disinfect the objects and surfaces you touch.</li>
-			          	 	<li>Please call GHS to get yourself tested for COVID-19</li>
-			          	 </ul>
-			          	<button onclick="move(this)" id="risk2" value="next" class="btn btn-info pl-5 pr-5 assess2">Next</button>
-			           </div>
-	           	   
-	           	   <!-- End. Thanks you -->	           	   
-	           	   		<div id="assessAssess" class="col-md-5 col-sm-12 uk-card uk-card-default uk-card-body uk-animation-scale-up border p-5 hide">
-		           	   	  <h3>Thank You</h3><br>
-			          	 <h5 class="text-justify mb-4">Thank you for your help to our health and care services to slow the COVID-19 outbreak.</h5>
-							<p class="text-justify">Please check and report your symptoms again if you feel any different. Monitoring your health to stay safe during the COVID-19 pandemic is extremely important.</p><br>
-							<a href="self-checker.html"><button type="submit" value="" class="btn btn-info pl-5 pr-5">Try again?</button></a>
-<!--			          	<button value="next" class="btn btn-info pl-5 pr-5 assess1">Next</button>-->
-			           </div>
-		           	   </div>			          	
-<!--			          </div>-->
-			      </div>
-<!--              </center>	-->
-			      			
-<!--			  </span>-->
-          </div>
-        </div>
-      </center>
-     </div>    
-    <script src="js/script.js" type="module"></script>
-    <script src="js/alertify.min.js"></script>
-    <script src="js/uikit.min.js"></script>
-    <script src="js/jquery-3.4.1.min.js"> </script>
-    <script src="js/bootstrap.min.js"></script>
-  </body>
-  <footer class="jumbotron mb-0 bg-light">
-     <center>
-        <div class="container-fluid">
-         <span><a target="_blank" href="https://twitter.com/yjbdanquah"><i class="fa fa-twitter-square" style="font-size:24px"></i></a></span>
-         <span><a target="_blank" href="https://web.facebook.com/johndanquahboateng"><i class="fa fa-facebook-square" style="font-size:24px"></i></a></span><br>
-          <span class="mb-0">Created by: jbdanquah</span><br>
-          <p class="mt-0">Email: yjbdanquah@gmail.com</p>
-          <hr>
-           <h3>Sources</h3>
+					<div class="card">
+						<div id="msg" class="card-body">
+							I will help you check yourself if your have covid-19 or not!
+						</div>
+						<div class="row d-flex justify-content-center">
+
+							<div
+								class="col-md-5 col-sm-12 uk-card uk-card-default uk-card-body uk-animation-scale-up border p-5 aboutAbout">
+								<p>Are you Ready?</p>
+								<div class="gender text-left text-light bg-info pl-3">
+									<div class="form-group">
+										<label for="email" class="form-check-label">What's your emaill address</label>
+										<input class="form-control p-4" id="email" name="email" type="email"
+											placeholder="Enter email address">
+
+									</div>
+									<div class="form-group">
+										<label for="phone" class="form-check-control">What's your phone number?</label>
+										<input class="form-control p-4" id="phone" name="phone" type="text"
+											placeholder="Enter phone number">
+
+									</div>
+								</div><br>
+								<button onclick="move(this)" id="about" type="submit" value="next"
+									class="btn btn-info pl-5 pr-5 About">Next</button>
+							</div>
+
+
+							<!-- about you -->
+							<div id="aboutAbout"
+								class="col-md-5 col-sm-12 uk-card uk-card-default uk-card-body uk-animation-scale-up border p-5 hide healthHealth">
+								<h3>About You</h3><br>
+
+								<label class="form-control mb-0" for="age">How old are you?</label>
+								<select class="form-control bg-info text-light " name="age" id="age">
+									<option disabled selected value="">Select Age</option>
+									<option value="0-9">0-9 years</option>
+									<option value="10-19">10-19 years</option>
+									<option value="20-29">20-29 years</option>
+									<option value="30-39">30-39 years</option>
+									<option value="40-49">40-49 years</option>
+									<option value="50-59">50-59 years</option>
+									<option value="60-69">60-69 years</option>
+									<option value="70-79">70-79 years</option>
+									<option value="80+">80+ years</option>
+								</select><br>
+								<p>Please tell us your gender</p>
+								<div class="gender text-left text-light bg-info pl-3">
+									<div class="form-check">
+										<input checked value="male" class="form-check-input" id="male" name="gender"
+											type="radio">
+										<label for="male" class="form-check-label">Male</label>
+									</div>
+									<div class="form-check">
+										<input value="female" class="form-check-input" id="female" name="gender"
+											type="radio">
+										<label for="female" class="form-check-label">Female</label>
+									</div>
+								</div><br>
+
+								<label class="form-control mb-0" for="region">Please tell us your region</label>
+								<!--			          	<select class="form-control " >-->
+								<input list="countries" name="country" required id="region"
+									class="form-control bg-info text-light p-2" type="text"
+									placeholder="Enter country eg: China">
+								<datalist id="countries">
+									<option value="Afghanistan" />
+									<option value="Albania" />
+									<option value="Algeria" />
+									<option value="American Samoa" />
+									<option value="Andorra" />
+									<option value="Angola" />
+									<option value="Anguilla" />
+									<option value="Antarctica" />
+									<option value="Antigua and Barbuda" />
+									<option value="Argentina" />
+									<option value="Armenia" />
+									<option value="Aruba" />
+									<option value="Australia" />
+									<option value="Austria" />
+									<option value="Azerbaijan" />
+									<option value="Bahamas" />
+									<option value="Bahrain" />
+									<option value="Bangladesh" />
+									<option value="Barbados" />
+									<option value="Belarus" />
+									<option value="Belgium" />
+									<option value="Belize" />
+									<option value="Benin" />
+									<option value="Bermuda" />
+									<option value="Bhutan" />
+									<option value="Bolivia" />
+									<option value="Bosnia and Herzegovina" />
+									<option value="Botswana" />
+									<option value="Bouvet Island" />
+									<option value="Brazil" />
+									<option value="British Indian Ocean Territory" />
+									<option value="Brunei Darussalam" />
+									<option value="Bulgaria" />
+									<option value="Burkina Faso" />
+									<option value="Burundi" />
+									<option value="Cambodia" />
+									<option value="Cameroon" />
+									<option value="Canada" />
+									<option value="Cape Verde" />
+									<option value="Cayman Islands" />
+									<option value="Central African Republic" />
+									<option value="Chad" />
+									<option value="Chile" />
+									<option value="China" />
+									<option value="Christmas Island" />
+									<option value="Cocos (Keeling) Islands" />
+									<option value="Colombia" />
+									<option value="Comoros" />
+									<option value="Congo" />
+									<option value="Congo, The Democratic Republic of The" />
+									<option value="Cook Islands" />
+									<option value="Costa Rica" />
+									<option value="Cote D'ivoire" />
+									<option value="Croatia" />
+									<option value="Cuba" />
+									<option value="Cyprus" />
+									<option value="Czech Republic" />
+									<option value="Denmark" />
+									<option value="Djibouti" />
+									<option value="Dominica" />
+									<option value="Dominican Republic" />
+									<option value="Ecuador" />
+									<option value="Egypt" />
+									<option value="El Salvador" />
+									<option value="Equatorial Guinea" />
+									<option value="Eritrea" />
+									<option value="Estonia" />
+									<option value="Ethiopia" />
+									<option value="Falkland Islands (Malvinas)" />
+									<option value="Faroe Islands" />
+									<option value="Fiji" />
+									<option value="Finland" />
+									<option value="France" />
+									<option value="French Guiana" />
+									<option value="French Polynesia" />
+									<option value="French Southern Territories" />
+									<option value="Gabon" />
+									<option value="Gambia" />
+									<option value="Georgia" />
+									<option value="Germany" />
+									<option value="Ghana" />
+									<option value="Gibraltar" />
+									<option value="Greece" />
+									<option value="Greenland" />
+									<option value="Grenada" />
+									<option value="Guadeloupe" />
+									<option value="Guam" />
+									<option value="Guatemala" />
+									<option value="Guinea" />
+									<option value="Guinea-bissau" />
+									<option value="Guyana" />
+									<option value="Haiti" />
+									<option value="Heard Island and Mcdonald Islands" />
+									<option value="Holy See (Vatican City State)" />
+									<option value="Honduras" />
+									<option value="Hong Kong" />
+									<option value="Hungary" />
+									<option value="Iceland" />
+									<option value="India" />
+									<option value="Indonesia" />
+									<option value="Iran, Islamic Republic of" />
+									<option value="Iraq" />
+									<option value="Ireland" />
+									<option value="Israel" />
+									<option value="Italy" />
+									<option value="Jamaica" />
+									<option value="Japan" />
+									<option value="Jordan" />
+									<option value="Kazakhstan" />
+									<option value="Kenya" />
+									<option value="Kiribati" />
+									<option value="Korea, Democratic People's Republic of" />
+									<option value="Korea, Republic of" />
+									<option value="Kuwait" />
+									<option value="Kyrgyzstan" />
+									<option value="Lao People's Democratic Republic" />
+									<option value="Latvia" />
+									<option value="Lebanon" />
+									<option value="Lesotho" />
+									<option value="Liberia" />
+									<option value="Libyan Arab Jamahiriya" />
+									<option value="Liechtenstein" />
+									<option value="Lithuania" />
+									<option value="Luxembourg" />
+									<option value="Macao" />
+									<option value="Macedonia, The Former Yugoslav Republic of" />
+									<option value="Madagascar" />
+									<option value="Malawi" />
+									<option value="Malaysia" />
+									<option value="Maldives" />
+									<option value="Mali" />
+									<option value="Malta" />
+									<option value="Marshall Islands" />
+									<option value="Martinique" />
+									<option value="Mauritania" />
+									<option value="Mauritius" />
+									<option value="Mayotte" />
+									<option value="Mexico" />
+									<option value="Micronesia, Federated States of" />
+									<option value="Moldova, Republic of" />
+									<option value="Monaco" />
+									<option value="Mongolia" />
+									<option value="Montserrat" />
+									<option value="Morocco" />
+									<option value="Mozambique" />
+									<option value="Myanmar" />
+									<option value="Namibia" />
+									<option value="Nauru" />
+									<option value="Nepal" />
+									<option value="Netherlands" />
+									<option value="Netherlands Antilles" />
+									<option value="New Caledonia" />
+									<option value="New Zealand" />
+									<option value="Nicaragua" />
+									<option value="Niger" />
+									<option value="Nigeria" />
+									<option value="Niue" />
+									<option value="Norfolk Island" />
+									<option value="Northern Mariana Islands" />
+									<option value="Norway" />
+									<option value="Oman" />
+									<option value="Pakistan" />
+									<option value="Palau" />
+									<option value="Palestinian Territory, Occupied" />
+									<option value="Panama" />
+									<option value="Papua New Guinea" />
+									<option value="Paraguay" />
+									<option value="Peru" />
+									<option value="Philippines" />
+									<option value="Pitcairn" />
+									<option value="Poland" />
+									<option value="Portugal" />
+									<option value="Puerto Rico" />
+									<option value="Qatar" />
+									<option value="Reunion" />
+									<option value="Romania" />
+									<option value="Russian Federation" />
+									<option value="Rwanda" />
+									<option value="Saint Helena" />
+									<option value="Saint Kitts and Nevis" />
+									<option value="Saint Lucia" />
+									<option value="Saint Pierre and Miquelon" />
+									<option value="Saint Vincent and The Grenadines" />
+									<option value="Samoa" />
+									<option value="San Marino" />
+									<option value="Sao Tome and Principe" />
+									<option value="Saudi Arabia" />
+									<option value="Senegal" />
+									<option value="Serbia and Montenegro" />
+									<option value="Seychelles" />
+									<option value="Sierra Leone" />
+									<option value="Singapore" />
+									<option value="Slovakia" />
+									<option value="Slovenia" />
+									<option value="Solomon Islands" />
+									<option value="Somalia" />
+									<option value="South Africa" />
+									<option value="South Georgia and The South Sandwich Islands" />
+									<option value="Spain" />
+									<option value="Sri Lanka" />
+									<option value="Sudan" />
+									<option value="Suriname" />
+									<option value="Svalbard and Jan Mayen" />
+									<option value="Swaziland" />
+									<option value="Sweden" />
+									<option value="Switzerland" />
+									<option value="Syrian Arab Republic" />
+									<option value="Taiwan, Province of China" />
+									<option value="Tajikistan" />
+									<option value="Tanzania, United Republic of" />
+									<option value="Thailand" />
+									<option value="Timor-leste" />
+									<option value="Togo" />
+									<option value="Tokelau" />
+									<option value="Tonga" />
+									<option value="Trinidad and Tobago" />
+									<option value="Tunisia" />
+									<option value="Turkey" />
+									<option value="Turkmenistan" />
+									<option value="Turks and Caicos Islands" />
+									<option value="Tuvalu" />
+									<option value="Uganda" />
+									<option value="Ukraine" />
+									<option value="United Arab Emirates" />
+									<option value="United Kingdom" />
+									<option value="United States" />
+									<option value="United States Minor Outlying Islands" />
+									<option value="Uruguay" />
+									<option value="Uzbekistan" />
+									<option value="Vanuatu" />
+									<option value="Venezuela" />
+									<option value="Viet Nam" />
+									<option value="Virgin Islands, British" />
+									<option value="Virgin Islands, U.S" />
+									<option value="Wallis and Futuna" />
+									<option value="Western Sahara" />
+									<option value="Yemen" />
+									<option value="Zambia" />
+									<option value="Zimbabwe" />
+								</datalist>
+
+								<!--			          	</select>-->
+								<br>
+								<p>Have you recently travelled abroad?</p>
+								<div class="travel text-left text-light bg-info pl-3">
+									<div class="form-check">
+										<input checked name="travel" value="yes" class="form-check-input" id="travelYes"
+											type="radio">
+										<label for="travelYes" class="form-check-label">Yes</label>
+									</div>
+									<div class="form-check">
+										<input name="travel" value="no" class="form-check-input" id="travelNo"
+											type="radio">
+										<label for="travelNo" class="form-check-label">No</label>
+									</div>
+								</div><br>
+								<button onclick="move(this)" id="health" type="submit" value="next"
+									class="btn btn-info pl-5 pr-5 Health">Next</button>
+
+							</div>
+
+							<!-- about your heath -->
+							<div id="healthHealth"
+								class="col-md-5 col-sm-12 uk-card uk-card-default uk-card-body uk-animation-scale-up border p-5 hide socialSocial">
+								<h3>About Your Health</h3><br>
+
+								<p>Do you smoke?</p>
+								<div class="smoke text-left text-light bg-info pl-3">
+									<div class="form-check">
+										<input checked name="smoke" value="yes" class="form-check-input" id="smokeYes"
+											type="radio">
+										<label for="smokeYes" class="form-check-label">Yes</label>
+									</div>
+									<div class="form-check">
+										<input name="smoke" value="no" class="form-check-input" id="smokeNo"
+											type="radio">
+										<label for="smokeNo" class="form-check-label">No</label>
+									</div>
+								</div><br>
+
+								<p>Do you have any of the following diseases?</p>
+								<ol class="text-left">
+									<li>Lung disease</li>
+									<li>Asthma</li>
+									<li>Heart disease</li>
+									<li>Diabetes</li>
+									<li>Kidney diseases</li>
+									<li>Cancer</li>
+								</ol>
+
+								<div class="disease text-left text-light bg-info pl-3">
+									<div class="form-check">
+										<input checked name="disease" value="yes" class="form-check-input"
+											id="deseaseYes" type="radio">
+										<label for="deseaseYes" class="form-check-label">Yes</label>
+									</div>
+									<div class="form-check">
+										<input name="disease" value="no" class="form-check-input" id="deseaseNo"
+											type="radio">
+										<label for="deseaseNo" class="form-check-label">No</label>
+									</div>
+								</div><br>
+								<button onclick="move(this)" id="social" type="submit" value="next"
+									class="btn btn-info pl-5 pr-5 Social">Next</button>
+							</div>
+
+							<!-- social distancing -->
+							<div id="socialSocial"
+								class="col-md-5 col-sm-12 uk-card uk-card-default uk-card-body uk-animation-scale-up border p-5 hide symptomsSymptoms">
+								<h3>Social Distancing</h3><br>
+								<p>Have you had close contact with someone suspected of having or had COVID-19
+									infection, such as family
+									members, colleagues or others?</p>
+								<div class="social text-left text-light bg-info pl-3">
+									<div class="form-check">
+										<input name="social" checked value="yes" class="form-check-input" id="socialYes"
+											type="radio">
+										<label for="socialYes" class="form-check-label">Yes</label>
+									</div>
+									<div class="form-check">
+										<input name="social" value="no" class="form-check-input" id="socialNo"
+											type="radio">
+										<label for="socialNo" class="form-check-label">No</label>
+									</div>
+								</div><br>
+								<button onclick="move(this)" id="symptoms" type="submit" value="next"
+									class="btn btn-info pl-5 pr-5 Symptoms">Next</button>
+							</div>
+
+							<!-- check symptoms -->
+							<div id="symptomsSymptoms"
+								class="col-md-5 col-sm-12 uk-card uk-card-default uk-card-body uk-animation-scale-up border p-5 hide assessAssess1">
+								<h3>Let's check your symptoms</h3><br>
+								<p>Do you have a fever?</p>
+								<div class="symptom text-left text-light bg-info pl-3">
+									<div class="form-check">
+										<input name="fever" checked value="yes" class="form-check-input" id="feverYes"
+											type="radio">
+										<label for="feverYes" class="form-check-label">Yes</label>
+									</div>
+									<div class="form-check">
+										<input name="fever" value="no" class="form-check-input" id="feverNo"
+											type="radio">
+										<label for="feverNo" class="form-check-label">No</label>
+									</div>
+								</div><br>
+
+								<p>Do you have cough - new or continuous?</p>
+								<div class="cough text-left text-light bg-info pl-3">
+									<div class="form-check">
+										<input checked name="cough" value="yes" class="form-check-input" id="coughYes"
+											type="radio">
+										<label for="coughYes" class="form-check-label">Yes</label>
+									</div>
+									<div class="form-check">
+										<input name="cough" value="no" class="form-check-input" id="coughNo"
+											type="radio">
+										<label for="coughNo" class="form-check-label">No</label>
+									</div>
+								</div><br>
+
+								<p>Do you have shortness of breath?</p>
+								<div class="breath text-left text-light bg-info pl-3">
+									<div class="form-check">
+										<input checked name="breath" value="yes" class="form-check-input" id="breathYes"
+											type="radio">
+										<label for="breathYes" class="form-check-label">Yes</label>
+									</div>
+									<div class="form-check">
+										<input name="breath" value="no" class="form-check-input" id="breathNo"
+											type="radio">
+										<label for="breathNo" class="form-check-label">No</label>
+									</div>
+								</div><br>
+								<p>Do you have loss of taste or smell?</p>
+								<div class="smell text-left text-light bg-info pl-3">
+									<div class="form-check">
+										<input checked name="smell" value="yes" class="form-check-input" id="smellYes"
+											type="radio">
+										<label for="smellYes" class="form-check-label">Yes</label>
+									</div>
+									<div class="form-check">
+										<input name="smell" value="no" class="form-check-input" id="smellNo"
+											type="radio">
+										<label for="smellNo" class="form-check-label">No</label>
+									</div>
+								</div><br>
+								<label class="form-control mb-0" for="age">How long have you had the symptoms?</label>
+								<select name="howLong" class="form-control bg-info text-light " id="howLong">
+									<option disabled selected value="">Select how long</option>
+									<option value="1">1 day</option>
+									<option value="2">2 days</option>
+									<option value="3">3 days</option>
+									<option value="4">4 days</option>
+									<option value="5">5 days</option>
+									<option value="6">6 days</option>
+									<option value="7">7 days</option>
+									<option value="8">8 days</option>
+									<option value="9">9 days</option>
+									<option value="10">10 days</option>
+									<option value="11">11 days</option>
+									<option value="12">12 days</option>
+									<option value="13">13 days</option>
+									<option value="14">14 days</option>
+								</select><br>
+								<button onclick="move(this)" id="assess" type="submit" value="submit"
+									class="btn btn-info pl-5 pr-5 Assess1 ">Submit</button>
+								<input id="diagnos" hidden value="0" type="text">
+							</div>
+
+							<!-- Risk Assessment 1 -->
+							<div id="assessAssess1"
+								class="col-md-5 col-sm-12 uk-card uk-card-default uk-card-body uk-animation-scale-up border p-5 hide risk1Ass">
+								<h3>Risk Assessment</h3><br>
+								<h5 class="text-justify mb-4">Based on the symptoms reported, your current risk of
+									having Covid-19 (Coronavirus) is High</h5>
+								<p class="text-justify">Remain calm, quarantine/separate yourself from household ,
+									friends and associates and contact Ghana Health Service helpline 112 for further
+									advice.</p>
+								<button onclick="move(this)" id="risk1" value="next"
+									class="btn btn-info pl-5 pr-5 assess1">Next</button>
+							</div>
+
+							<!-- Risk Assessment 2 -->
+							<div id="assessAssess2"
+								class="col-md-5 uk-card uk-card-default uk-card-body uk-animation-scale-up col-sm-12 border p-5 hide">
+								<h3>Risk Assessment</h3><br>
+								<h5 class="mb-4">Based on the symptoms reported, your current risk of having Covid-19
+									(Coronavirus) is <b>Medium</b></h5>
+								<ul>
+									<li>Please follow the general guidelines for prevention as advised by Ghana Health
+										Service.</li>
+									<li>Stay home, avoid crowds and contact with others.</li>
+									<li>Wash your hands with soap and water before touching anything including your
+										eyes, nose and mouth.</li>
+									<li>Cover your mouth and nose when you cough or sneeze.</li>
+									<li>Disinfect the objects and surfaces you touch.</li>
+									<li>Please call GHS to get yourself tested for COVID-19</li>
+								</ul>
+								<button onclick="move(this)" id="risk2" value="next"
+									class="btn btn-info pl-5 pr-5 assess2">Next</button>
+							</div>
+
+							<!-- End. Thanks you -->
+							<div id="assessAssess"
+								class="col-md-5 col-sm-12 uk-card uk-card-default uk-card-body uk-animation-scale-up border p-5 hide">
+								<h3>Thank You</h3><br>
+								<h5 class="text-justify mb-4">Thank you for your help to our health and care services to
+									slow the COVID-19 outbreak.</h5>
+								<p class="text-justify">Please check and report your symptoms again if you feel any
+									different. Monitoring your health to stay safe during the COVID-19 pandemic is
+									extremely important.</p><br>
+								<a href="self-checker.html"><button type="submit" value=""
+										class="btn btn-info pl-5 pr-5">Try again?</button></a>
+								<!--			          	<button value="next" class="btn btn-info pl-5 pr-5 assess1">Next</button>-->
+							</div>
+						</div>
+						<!--			          </div>-->
+					</div>
+					<!--              </center>	-->
+					
+					<!--			  </span>-->
+				</div>
+			</div>
+		</center>
+	</div>
+	<script src="js/script.js" type="text/javascript"></script>
+	<script src="js/alertify.min.js"></script>
+	<script src="js/uikit.min.js"></script>
+	<script src="js/jquery-3.4.1.min.js"> </script>
+	<script src="js/bootstrap.min.js"></script>
+</body>
+<footer class="jumbotron mb-0 bg-light">
+	<center>
+		<div class="container-fluid">
+			<span><a target="_blank" href="https://twitter.com/yjbdanquah"><i class="fa fa-twitter-square"
+						style="font-size:24px"></i></a></span>
+			<span><a target="_blank" href="https://web.facebook.com/johndanquahboateng"><i class="fa fa-facebook-square"
+						style="font-size:24px"></i></a></span><br>
+			<span class="mb-0">Created by: jbdanquah</span><br>
+			<p class="mt-0">Email: yjbdanquah@gmail.com</p>
+			<hr>
+			<h3>Sources</h3>
 			<p>Local government websites/health departments</p>
 			<a class="m-2" href="https://newsapi.org">NewsAPI</a>|
 			<a class="m-2" href="https://www.cdc.gov/">CDC</a>|
 			<a class="m-2" href="https://www.cdc.gov/">NovelCOVID API</a>|
 			<a class="m-2" href="https://www.who.int/">WHO</a>
 
-        </div>
-     </center>
-  
-  </footer>
+		</div>
+	</center>
+
+</footer>
+
 </html>
